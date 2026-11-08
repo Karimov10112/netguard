@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Aktivlar va IoC{% endblock %}
+{% block content %}
+<div class="page-head"><div><h1>Aktivlar va tahdid indikatorlari</h1><p>S_aktiv — hujum nishoni bo‘lgan aktivning muhimligi (0–1); ro‘yxatda bo‘lmagan xostlar uchun {{ C.DEFAULT_ASSET }}. IoC — signatura moduli tekshiradigan zararli IP va domenlar.</p></div></div>
+<div class="grid grid-main">
+  <div class="card">
+    <h2>Muhim aktivlar (S_aktiv)</h2>
+    <table>
+      <thead><tr><th>IP</th><th>Nomi</th><th>Vazifasi</th><th>Segment</th><th class="num">S_aktiv</th><th></th></tr></thead>
+      <tbody>{% for a in assets %}
+        <tr><td class="ip">{{ a.ip }}</td><td>{{ a.name }}</td><td class="small">{{ a.role }}</td><td class="small">{{ a.ip|seg }}</td>
+          <td class="num"><b>{{ a.criticality|f2 }}</b></td>
+          <td><form method="post" action="{{ url_for('assets_delete') }}"><input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="ip" value="{{ a.ip }}"><button class="btn secondary small">×</button></form></td></tr>
+      {% endfor %}</tbody>
+    </table>
+    <h3 class="mt">Aktiv qo‘shish / o‘zgartirish</h3>
+    <form method="post" action="{{ url_for('assets_save') }}" class="row">
+      <input type="hidden" name="csrf" value="{{ csrf_token }}">
+      <input type="text" name="ip" placeholder="10.0.1.60" style="width:140px" required>
+      <input type="text" name="name" placeholder="nomi" style="width:120px">
+      <input type="text" name="role" placeholder="vazifasi" style="flex:1; min-width:160px">
+      <input type="number" name="criticality" min="0" max="1" step="0.05" value="0.8">
+      <button class="btn">Saqlash</button>
+    </form>
+  </div>
+  <div>
+    <div class="card">
+      <h2>Tarmoq segmentlari</h2>
+      <div class="kv">{% for k, v in segments.items() %}<div>{{ C.SEGMENT_UZ[k] }}</div><div class="ip">{{ v }}</div>{% endfor %}</div>
+      <p class="small muted mt">Segmentlar <code>netguard/config.py</code> faylida sozlanadi; <code>$USER_NET</code> (ishchi stansiyalar) 3-qoida va gorizontal harakat qoidasi uchun ishlatiladi.</p>
+    </div>
+    <div class="card mt" id="ioc">
+      <h2>IoC ro‘yxati</h2>
+      <table><tbody>{% for i in ioc %}
+        <tr><td><span class="ip">{{ i.value }}</span><span class="seg">{{ i.type }} · {{ i.note }}</span></td>
+          <td style="width:40px"><form method="post" action="{{ url_for('ioc_delete') }}"><input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="value" value="{{ i.value }}"><button class="btn secondary small">×</button></form></td></tr>
+      {% else %}<tr><td class="muted">Bo‘sh</td></tr>{% endfor %}</tbody></table>
+      <form method="post" action="{{ url_for('ioc_add') }}" class="mt">
+        <input type="hidden" name="csrf" value="{{ csrf_token }}">
+        <div class="field"><input type="text" name="value" placeholder="IP manzil yoki domen" required></div>
+        <div class="field"><input type="text" name="note" placeholder="Manba / izoh"></div>
+        <button class="btn secondary small">Qo‘shish</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

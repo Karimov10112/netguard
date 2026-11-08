@@ -1,0 +1,6 @@
+{% macro level(lv) %}<span class="pill {{ lv }}">{{ LEVEL_UZ.get(lv, lv) }}</span>{% endmacro %}
+{% macro riskbar(r) %}{% set c = '#cf3b3b' if r >= C.LEVEL_HIGH else ('#e0a21b' if r >= C.LEVEL_MEDIUM else '#8a97a8') %}<span class="risk"><i><b style="width: {{ (r * 100)|round(0) }}%; background: {{ c }}"></b></i>{{ r|f2 }}</span>{% endmacro %}
+{% macro ipcell(ip) %}<span class="ip">{{ ip }}</span>{% if ip|seg %}<span class="seg">{{ ip|seg }}</span>{% endif %}{% endmacro %}
+{% macro mitre(t) %}{% if t %}<span class="mitre" title="{{ MITRE.get(t, ('', ''))[0] }} — {{ MITRE.get(t, ('', ''))[1] }}">{{ t }}</span>{% endif %}{% endmacro %}
+{% macro module(m) %}<span class="pill mod mod-{{ m }}">{{ MODULE_UZ.get(m, m) }}</span>{% endmacro %}
+{% macro st(s) %}<span class="pill st-{{ s }}">{{ STATUS_UZ.get(s, s) }}</span>{% endmacro %}

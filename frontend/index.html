@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetGuard — SOC dashboard</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <strong>NetGuard</strong>
+      <span>alohida frontend · backend API</span>
+    </div>
+    <form id="settings" class="settings">
+      <label for="api-url">API URL</label>
+      <input id="api-url" value="http://127.0.0.1:5000">
+      <label for="api-key">API kalit</label>
+      <input id="api-key" type="password" placeholder="ixtiyoriy">
+      <button>Ulanish</button>
+    </form>
+  </header>
+
+  <main>
+    <div id="message" class="message" hidden></div>
+    <section class="page-head">
+      <div>
+        <h1>Xavfsizlik boshqaruv paneli</h1>
+        <p id="status">Backend bilan ulanish kutilmoqda...</p>
+      </div>
+      <div class="page-actions">
+        <button id="simulate">▶ Sinov hujumlarini simulyatsiya qilish</button>
+        <button id="refresh" class="secondary">Yangilash</button>
+      </div>
+    </section>
+
+    <section id="kpis" class="kpis"></section>
+    <div class="grid">
+      <section class="card">
+        <div class="section-head"><h2>Ochiq insidentlar</h2><span id="incident-count"></span></div>
+        <div class="table-wrap"><table><thead><tr><th>ID</th><th>Sarlavha</th><th>Daraja</th><th>Risk</th><th>Holat</th></tr></thead>
+          <tbody id="incidents"></tbody>
+        </table></div>
+      </section>
+      <section class="card">
+        <div class="section-head"><h2>Faol choralar</h2><span id="block-count"></span></div>
+        <div class="table-wrap"><table><thead><tr><th>Target</th><th>Chora</th><th>Qolgan vaqt</th></tr></thead>
+          <tbody id="blocklist"></tbody>
+        </table></div>
+      </section>
+    </div>
+    <section class="card">
+      <div class="section-head"><h2>So‘nggi ogohlantirishlar</h2><span id="alert-count"></span></div>
+      <div class="table-wrap"><table><thead><tr><th>Manba</th><th>Nomi</th><th>Daraja</th><th>Risk</th><th>Vaqt</th></tr></thead>
+        <tbody id="alerts"></tbody>
+      </table></div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

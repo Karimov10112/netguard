@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: netguard-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT app:app
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: NETGUARD_MODE
+        value: ids
+      - key: NETGUARD_FRONTEND_ORIGIN
+        sync: false
+      - key: NETGUARD_API_KEY
+        sync: false

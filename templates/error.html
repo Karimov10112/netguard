@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block title %}Xato {{ e.code }}{% endblock %}
+{% block content %}
+<div class="card"><h1>{{ e.code }} — {{ e.name }}</h1><p>{{ e.description }}</p><a class="btn secondary" href="{{ url_for('dashboard') }}">Boshqaruv paneliga qaytish</a></div>
+{% endblock %}

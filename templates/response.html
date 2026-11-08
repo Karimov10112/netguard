@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% from "_macros.html" import ipcell, st with context %}
+{% block title %}Javob choralari{% endblock %}
+{% block content %}
+<div class="page-head"><div><h1>Javob choralari va bloklash</h1><p>4-qatlam: avtomatik va qo‘lda qo‘llangan choralar, oq ro‘yxat, ish rejimi. Bloklash agentlar (B-ilova) tomonidan <code>/api/v1/blocklist</code> orqali olinadi.</p></div></div>
+
+<div class="grid grid-3">
+  <div class="card">
+    <h2>Ish rejimi</h2>
+    <form method="post" action="{{ url_for('response_mode') }}">
+      <input type="hidden" name="csrf" value="{{ csrf_token }}">
+      <label class="row" style="font-weight:400; flex-wrap:nowrap; align-items:flex-start"><input type="radio" name="mode" value="ids" {{ 'checked' if mode == 'ids' }}> <span><b>IDS — faqat monitoring.</b> Choralar «tavsiya» sifatida yoziladi, tarmoqqa qo‘llanmaydi.</span></label>
+      <label class="row mt" style="font-weight:400; flex-wrap:nowrap; align-items:flex-start"><input type="radio" name="mode" value="ips" {{ 'checked' if mode == 'ips' }}> <span><b>IPS — faol himoya.</b> Risk ≥ {{ C.LEVEL_HIGH }} bo‘lsa manba {{ C.BLOCK_TTL_H }} soatga bloklanadi / xost karantinga o‘tkaziladi.</span></label>
+      <button class="btn mt">Saqlash</button>
+    </form>
+    <p class="small muted mt">Diplom tavsiyasi (3.4-band): yangi qoidalar va avtomatik bloklash kamida 2 hafta monitoring rejimida sinalgandan keyin yoqiladi.</p>
+  </div>
+  <div class="card">
+    <h2>Qo‘lda chora</h2>
+    <form method="post" action="{{ url_for('response_manual') }}">
+      <input type="hidden" name="csrf" value="{{ csrf_token }}">
+      <div class="field"><label>Chora</label><select name="action">{% for k, v in ACTION_UZ.items() if k not in ('unblock', 'notify_soc') %}<option value="{{ k }}">{{ v }}</option>{% endfor %}</select></div>
+      <div class="field"><label>Nishon (IP / domen / hisob)</label><input type="text" name="target" placeholder="185.220.101.47" required></div>
+      <div class="field"><label>Sabab</label><input type="text" name="reason" placeholder="Tahdidlar razvedkasi ma’lumoti"></div>
+      <button class="btn danger">Qo‘llash</button>
+    </form>
+  </div>
+  <div class="card">
+    <h2>Himoya choralari</h2>
+    <ol class="small" style="padding-left:18px; margin:0">
+      <li>Oq ro‘yxatdagi muhim aktivlar va hamkorlar avtomatik bloklanmaydi.</li>
+      <li>Bloklash muddatli (TTL = {{ C.BLOCK_TTL_H }} soat), avtomatik bekor bo‘ladi (<code>ipset … timeout {{ C.BLOCK_TTL_H * 3600 }}</code>).</li>
+      <li>Har bir avtomatik harakat jurnalga yoziladi, tahlilchi uni bir tugma bilan bekor qiladi.</li>
+      <li>Monitoring rejimida choralar faqat tavsiya sifatida yoziladi.</li>
+    </ol>
+    <h3 class="mt">Agent uchun bloklash ro‘yxati</h3>
+    <p class="small">Faol yozuvlar: <b>{{ blocklist|length }}</b> · <a href="{{ url_for('api_blocklist') }}">/api/v1/blocklist</a></p>
+  </div>
+</div>
+
+<div class="card mt">
+  <h2>Faol choralar ({{ active|length }})</h2>
+  {% if active %}
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Vaqt</th><th>Chora</th><th>Nishon</th><th>Sabab</th><th>Holat</th><th>Muddat</th><th>Buyruq</th><th></th></tr></thead>
+    <tbody>{% for a in active %}
+      <tr><td class="when">{{ a.ts|ts }}</td><td>{{ ACTION_UZ.get(a.action, a.action) }}</td><td>{{ ipcell(a.target) }}</td>
+        <td class="small wrap">{{ a.reason }}{% if a.incident_id %} · <a href="{{ url_for('incident', iid=a.incident_id) }}">#{{ a.incident_id }}</a>{% endif %}</td>
+        <td>{{ st(a.status) }}<span class="seg">{{ 'avtomatik' if a.actor == 'auto' else 'tahlilchi' }}</span></td>
+        <td class="small">{{ a.expires|t if a.expires else 'qo‘lda bekor qilinguncha' }}</td>
+        <td style="min-width:260px">{% for c in a.cmds %}<div class="cmd">{{ c }}</div>{% endfor %}</td>
+        <td><form method="post" action="{{ url_for('response_revoke', aid=a.id) }}"><input type="hidden" name="csrf" value="{{ csrf_token }}"><button class="btn secondary small" title="{{ a.undo|join('; ') }}">Bekor qilish</button></form></td></tr>
+    {% endfor %}</tbody>
+  </table></div>
+  {% else %}<div class="empty">Faol choralar yo‘q</div>{% endif %}
+</div>
+
+<div class="grid grid-main mt">
+  <div class="card">
+    <h2>Choralar jurnali</h2>
+    {% if acts %}
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>#</th><th>Vaqt</th><th>Chora</th><th>Nishon</th><th>Holat</th><th>Kim</th><th>Sabab</th></tr></thead>
+      <tbody>{% for a in acts[:150] %}
+        <tr><td class="num">{{ a.id }}</td><td class="when">{{ a.ts|ts }}</td><td class="small">{{ ACTION_UZ.get(a.action, a.action) }}</td><td><span class="ip">{{ a.target }}</span></td>
+          <td>{{ st(a.status) }}{% if a.revoked %}<span class="seg">{{ a.revoked|t }} ({{ a.revoked_by }})</span>{% endif %}</td><td class="small">{{ 'avto' if a.actor == 'auto' else 'tahlilchi' }}</td><td class="small wrap">{{ a.reason }}</td></tr>
+      {% endfor %}</tbody>
+    </table></div>
+    {% else %}<div class="empty">Jurnal bo‘sh</div>{% endif %}
+  </div>
+  <div class="card" id="whitelist">
+    <h2>Oq ro‘yxat</h2>
+    <table><tbody>{% for w in white %}
+      <tr><td><span class="ip">{{ w.cidr }}</span><span class="seg">{{ w.note }}</span></td>
+        <td style="width:40px"><form method="post" action="{{ url_for('whitelist_delete') }}"><input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="cidr" value="{{ w.cidr }}"><button class="btn secondary small" title="O‘chirish">×</button></form></td></tr>
+    {% endfor %}</tbody></table>
+    <form method="post" action="{{ url_for('whitelist_add') }}" class="mt">
+      <input type="hidden" name="csrf" value="{{ csrf_token }}">
+      <div class="field"><input type="text" name="cidr" placeholder="10.0.1.0/24" required></div>
+      <div class="field"><input type="text" name="note" placeholder="Izoh (masalan, hamkor bank)"></div>
+      <button class="btn secondary small">Qo‘shish</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

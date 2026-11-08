@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% from "_macros.html" import level, riskbar, ipcell, mitre, module, st with context %}
+{% block title %}Insident #{{ inc.id }}{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div><h1>#{{ inc.id }} · {{ inc.title }}</h1>
+    <p>Subyekt: <span class="ip">{{ inc.entity }}</span> ({{ inc.entity|seg or 'hisob yozuvi / domen' }}{% if assets.get(inc.entity) %}, {{ assets[inc.entity].name }} — {{ assets[inc.entity].role }}{% endif %}) · {{ inc.first_ts|t }} — {{ inc.last_ts|t }}</p></div>
+  <div class="row">{{ level(inc.level) }} <span class="pill {{ inc.status }}">{{ INC_STATUS_UZ[inc.status] }}</span></div>
+</div>
+
+<div class="grid grid-main">
+  <div>
+    <div class="card">
+      <h2>Xulosa</h2>
+      <div class="kv">
+        <div>Risk balli</div><div>{{ riskbar(inc.risk) }} — {{ LEVEL_ACTION_UZ[inc.level] }}</div>
+        <div>MITRE ATT&CK</div><div>{% for t in inc.mitre %}{{ mitre(t) }} <span class="small">{{ MITRE.get(t, ('', ''))[0] }}</span><br>{% endfor %}</div>
+        <div>Aniqlash vaqti (MTTD)</div><div>{{ (inc.detected_ts - inc.first_ts)|dur if inc.detected_ts else '—' }}</div>
+        <div>Javob vaqti (MTTR)</div><div>{{ (inc.responded_ts - inc.detected_ts)|dur if inc.responded_ts and inc.detected_ts else '—' }}</div>
+        {% if inc.detail.classes %}<div>ML hujum turlari</div><div>{% for c, n in inc.detail.classes.items() %}<span class="chip">{{ c }}: {{ n }}</span> {% endfor %}</div>{% endif %}
+        {% if inc.detail.targets %}<div>Nishonlar</div><div>{% for d in inc.detail.targets[:15] %}<span class="ip">{{ d }}</span>{{ ', ' if not loop.last }}{% endfor %}{% if inc.detail.targets|length > 15 %} …{% endif %}</div>{% endif %}
+      </div>
+    </div>
+
+    {% if inc.rules %}
+    <div class="card mt">
+      <h2>SIEM korrelyatsiya qoidalari</h2>
+      {% for r in inc.rules %}
+        <div style="border-bottom:1px dashed var(--line); padding:8px 0">
+          <b>{{ r }} · {{ RULES[r][0] }}</b> {% for t in RULES[r][2] %}{{ mitre(t) }}{% endfor %}
+          <div class="small muted">Shart: {{ RULES[r][1] }} · Javob: {{ RULES[r][3] }}</div>
+          {% if inc.detail.correlation.get(r) %}<div class="chips mt" style="margin-top:6px">{% for k, v in inc.detail.correlation[r].items() %}<span class="chip">{{ k }}: {{ v if v is not iterable or v is string else v|join(', ') }}</span>{% endfor %}</div>{% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="card mt">
+      <h2>Ogohlantirishlar ({{ alerts|length }})</h2>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Vaqt</th><th>Ogohlantirish</th><th>Modul</th><th>Nishon</th><th>ATT&CK</th><th class="num">Soni</th><th>Risk</th></tr></thead>
+        <tbody>{% for a in alerts|sort(attribute='first_ts') %}
+          <tr><td class="small">{{ a.first_ts|t(false) }}</td><td class="wrap"><a href="{{ url_for('alert', aid=a.id) }}">{{ a.name }}</a></td><td>{{ module(a.module) }}</td>
+            <td>{{ ipcell(a.dst) }}{% if a.dsts|length > 1 %}<span class="seg">+{{ a.dsts|length - 1 }}</span>{% endif %}</td><td>{{ mitre(a.mitre) }}</td><td class="num">{{ a.count }}</td><td>{{ riskbar(a.risk) }}</td></tr>
+        {% endfor %}</tbody>
+      </table></div>
+    </div>
+
+    <div class="card mt">
+      <h2>Javob choralari</h2>
+      {% if acts %}
+      <ul class="timeline">
+        {% for x in acts|sort(attribute='id') %}
+          <li class="act"><span class="tm">{{ x.ts|t }}</span> <b>{{ ACTION_UZ.get(x.action, x.action) }}</b> → <span class="ip">{{ x.target }}</span> {{ st(x.status) }}
+            <span class="small muted">({{ 'avtomatik' if x.actor == 'auto' else 'tahlilchi' }}{% if x.expires %}, {{ x.expires|t }} gacha{% endif %})</span>
+            <div class="small muted">{{ x.reason }}</div>
+            {% for c in x.cmds %}<div class="cmd">{{ c }}</div>{% endfor %}
+            {% if x.status in ('active', 'simulated') %}<form method="post" action="{{ url_for('response_revoke', aid=x.id) }}" class="inline"><input type="hidden" name="csrf" value="{{ csrf_token }}"><button class="btn secondary small mt" style="margin-top:6px">Bekor qilish</button></form>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      {% else %}<p class="muted">Avtomatik chora qo‘llanmagan (risk past yoki chora talab etilmaydi).</p>{% endif %}
+    </div>
+  </div>
+
+  <div>
+    <div class="card">
+      <h2>Risk tarkibi (3.2)</h2>
+      {% for name, v, w, c in parts %}
+        <div class="comp"><div class="top"><span class="small">{{ name }} × {{ w }}</span><b>{{ v|f2 }}</b></div>
+          <div class="bar"><span class="lvl-{{ 'high' if v >= 0.8 else ('mid' if v >= 0.5 else 'low') }}" style="width: {{ (v * 100)|round(0) }}%"></span></div></div>
+      {% endfor %}
+      <p class="small muted">Formula bo‘yicha: {{ '%.3f'|format(parts|sum(attribute=3)) }}{% if forced %}; korrelyatsiya qoidasi darajasi: {{ forced }}{% endif %}. Yakuniy risk — ikkalasining kattasi.</p>
+    </div>
+    <div class="card mt">
+      <h2>Tahlilchi</h2>
+      <form method="post" action="{{ url_for('incident_update', iid=inc.id) }}">
+        <input type="hidden" name="csrf" value="{{ csrf_token }}">
+        <div class="field"><label>Holat</label><select name="status">{% for k, v in INC_STATUS_UZ.items() %}<option value="{{ k }}" {{ 'selected' if inc.status == k }}>{{ v }}</option>{% endfor %}</select></div>
+        <div class="field"><label>Mas’ul</label><input type="text" name="assignee" value="{{ inc.assignee }}" placeholder="SOC tahlilchisi"></div>
+        <div class="field"><label>Izoh</label><textarea name="notes" style="min-height:90px; font-family:inherit">{{ inc.notes }}</textarea></div>
+        <button class="btn">Saqlash</button>
+      </form>
+      <p class="small muted mt">«Soxta trevoga» deb belgilangan insidentlar modelni qayta o‘qitishda va qoidalar chegaralarini sozlashda ishlatiladi (3.4-band).</p>
+    </div>
+    <div class="card mt">
+      <h2>Qo‘lda chora ko‘rish</h2>
+      <form method="post" action="{{ url_for('incident_respond', iid=inc.id) }}">
+        <input type="hidden" name="csrf" value="{{ csrf_token }}">
+        <div class="field"><label>Chora</label><select name="action">{% for k, v in ACTION_UZ.items() if k != 'unblock' %}<option value="{{ k }}">{{ v }}</option>{% endfor %}</select></div>
+        <div class="field"><label>Nishon</label><input type="text" name="target" value="{{ inc.entity }}"></div>
+        <button class="btn danger">Qo‘llash</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

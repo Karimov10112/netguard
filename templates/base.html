@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}NetGuard{% endblock %} — korxona tarmog‘ini himoya qilish tizimi</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 2 4 7v8c0 7.5 5.1 13.6 12 15 6.9-1.4 12-7.5 12-15V7z' fill='%2313294b'/><circle cx='16' cy='15' r='5' fill='none' stroke='white' stroke-width='2.5'/></svg>">
+</head>
+<body>
+<header class="topbar">
+  <div class="inner">
+    <a class="brand" href="{{ url_for('dashboard') }}">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 4 7v8c0 7.5 5.1 13.6 12 15 6.9-1.4 12-7.5 12-15V7z" fill="#0e8a7d"/><path d="M9 16h4l2-5 3 9 2-4h3" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>NetGuard <small>IDS/IPS · SIEM</small></span>
+    </a>
+    {% set ep = request.endpoint %}
+    <nav class="nav">
+      <a href="{{ url_for('dashboard') }}" class="{{ 'active' if ep == 'dashboard' }}">Boshqaruv paneli</a>
+      <a href="{{ url_for('incidents') }}" class="{{ 'active' if ep in ('incidents', 'incident') }}">Insidentlar{% if open_badge.get('high') %}<span class="badge">{{ open_badge.get('high') }}</span>{% endif %}</a>
+      <a href="{{ url_for('alerts') }}" class="{{ 'active' if ep in ('alerts', 'alert') }}">Ogohlantirishlar</a>
+      <a href="{{ url_for('response') }}" class="{{ 'active' if ep == 'response' }}">Javob choralari</a>
+      <a href="{{ url_for('assets') }}" class="{{ 'active' if ep == 'assets' }}">Aktivlar va IoC</a>
+      <a href="{{ url_for('data') }}" class="{{ 'active' if ep in ('data', 'batch') }}">Ma’lumotlar</a>
+      <a href="{{ url_for('models') }}" class="{{ 'active' if ep == 'models' }}">ML modellar</a>
+      <a href="{{ url_for('api_docs') }}" class="{{ 'active' if ep == 'api_docs' }}">API</a>
+      <a href="{{ url_for('about') }}" class="{{ 'active' if ep == 'about' }}">Tizim haqida</a>
+    </nav>
+    <span class="mode {{ mode }}" title="Rejimni «Javob choralari» sahifasida o‘zgartirish mumkin">{{ 'IPS · faol himoya' if mode == 'ips' else 'IDS · monitoring' }}</span>
+  </div>
+</header>
+<main>
+  {% with msgs = get_flashed_messages(with_categories=true) %}
+    {% for cat, msg in msgs %}<div class="flash {{ cat }}">{{ msg }}</div>{% endfor %}
+  {% endwith %}
+  {% block content %}{% endblock %}
+</main>
+<footer>NetGuard v{{ version }} · Korxona tarmog‘ida kiberhujumlarni aniqlash va oldini olish tizimi · Diplom loyihasi, 2026</footer>
+</body>
+</html>

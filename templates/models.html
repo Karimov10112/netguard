@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}ML modellar{% endblock %}
+{% block content %}
+<div class="page-head"><div><h1>ML modul: NSL-KDD eksperimenti</h1><p>2-qatlam modellari va diplomning 3.2-bandidagi tajriba natijalari (<code>python train/train_models.py</code> natijasi, <code>models/metrics.json</code>).</p></div></div>
+{% if m %}
+{% set d = m.dataset %}
+<div class="grid grid-4">
+  <div class="card stat"><div class="l">O‘quv to‘plami (KDDTrain+)</div><div class="v">{{ d.train|num }}</div><div class="sub">hujum: {{ d.train_attacks|num }}</div></div>
+  <div class="card stat"><div class="l">Test (KDDTest+)</div><div class="v">{{ d.test|num }}</div><div class="sub">hujum: {{ d.test_attacks|num }} · KDDTest-21: {{ d.test21|num }}</div></div>
+  <div class="card stat"><div class="l">Testdagi yangi hujum turlari</div><div class="v red">{{ d.novel_types|length }}</div><div class="sub">{{ d.novel_records|num }} yozuv o‘quvda uchramaydi</div></div>
+  <div class="card stat"><div class="l">Xususiyatlar vektori</div><div class="v blue">{{ d.vector_dim }}</div><div class="sub">41 xususiyat, one-hot + StandardScaler</div></div>
+</div>
+
+<div class="card mt">
+  <h2>Modellarni taqqoslash (KDDTest+, ikkilik tasnif)</h2>
+  {% set best = m.binary.values()|map(attribute='f1')|max %}
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Model</th><th class="num">Accuracy</th><th class="num">Precision</th><th class="num">Recall</th><th class="num">F1</th><th class="num">FPR</th><th class="num">ROC-AUC</th><th class="num">Yangi hujumlar</th><th class="num">KDDTest-21 F1</th><th class="num">ms/1000</th></tr></thead>
+    <tbody>{% for name, x in m.binary.items() %}
+      <tr class="{{ 'best' if x.f1 == best }}"><td>{{ name }}</td><td class="num">{{ x.accuracy|pct }}</td><td class="num">{{ '%.3f'|format(x.precision) }}</td><td class="num">{{ '%.3f'|format(x.recall) }}</td>
+        <td class="num"><b>{{ '%.3f'|format(x.f1) }}</b></td><td class="num">{{ x.fpr|pct }}</td><td class="num">{{ '%.3f'|format(x.roc_auc) if x.roc_auc is defined else '—' }}</td>
+        <td class="num">{{ m.novel_detection[name]|pct }}</td><td class="num">{{ '%.3f'|format(m.test21[name].f1) }}</td><td class="num">{{ x.ms_per_1000 if x.ms_per_1000 is defined else '—' }}</td></tr>
+    {% endfor %}</tbody>
+  </table></div>
+  <p class="small muted mt">Gibrid qoida (3.1): hujum = [P_XGB ≥ 0,5] ∨ [IF anomaliya]. Isolation Forest faqat normal trafikda o‘qitilgan, shuning uchun u XGBoost ko‘rmagan yangi hujum turlarini to‘ldiradi: yangi hujumlarni aniqlash {{ m.novel_detection['XGBoost']|pct }} → {{ m.novel_detection['Gibrid (XGBoost + IF)']|pct }}.</p>
+</div>
+
+<div class="grid grid-2 mt">
+  <div class="card">
+    <h2>ROC egri chiziqlari</h2>
+    {% set colors = ['#7f8c8d', '#d4a72c', '#2a8c82', '#1f3a5f', '#c0392b', '#7a5cd6', '#0e8a7d'] %}
+    <svg viewBox="0 0 330 300" width="100%" role="img" aria-label="ROC">
+      <rect x="40" y="10" width="270" height="250" fill="#fafbfd" stroke="#e2e7ef"/>
+      <line x1="40" y1="260" x2="310" y2="10" stroke="#c3cede" stroke-dasharray="4 4"/>
+      {% for name, x in m.binary.items() if x.roc is defined %}
+        {% set pts = [] %}
+        {% for i in range(x.roc.fpr|length) %}{% set _ = pts.append(((40 + x.roc.fpr[i] * 270)|round(1))|string ~ ',' ~ ((260 - x.roc.tpr[i] * 250)|round(1))|string) %}{% endfor %}
+        <polyline points="{{ pts|join(' ') }}" fill="none" stroke="{{ colors[loop.index0 % 7] }}" stroke-width="2"/>
+      {% endfor %}
+      <text x="175" y="290" font-size="11" text-anchor="middle" fill="#5d6b7e">FPR</text>
+      <text x="14" y="135" font-size="11" text-anchor="middle" fill="#5d6b7e" transform="rotate(-90 14 135)">TPR (Recall)</text>
+    </svg>
+    <div class="chips">{% for name, x in m.binary.items() if x.roc is defined %}<span class="chip" style="border-left:4px solid {{ colors[loop.index0 % 7] }}">{{ name }} · {{ '%.3f'|format(x.roc_auc) }}</span>{% endfor %}</div>
+  </div>
+  <div class="card">
+    <h2>XGBoost chegarasini tanlash</h2>
+    <table><thead><tr><th class="num">Chegara</th><th class="num">Recall</th><th class="num">FPR</th><th class="num">F1</th></tr></thead>
+      <tbody>{% for t in m.thresholds %}<tr class="{{ 'best' if t.threshold == 0.5 }}"><td class="num">{{ t.threshold }}</td><td class="num">{{ t.recall|pct }}</td><td class="num">{{ t.fpr|pct }}</td><td class="num">{{ '%.3f'|format(t.f1) }}</td></tr>{% endfor %}</tbody></table>
+    <p class="small muted">Chegarani pasaytirish Recall’ni oshiradi, lekin soxta trevogalar ham ko‘payadi; tizimda 0,5 ishlatiladi, past ehtimolli hodisalar esa risk balli orqali hisobga olinadi.</p>
+    {% set cm = m.binary['Gibrid (XGBoost + IF)'].confusion %}
+    <h3 class="mt">Gibrid model xatoliklar matritsasi</h3>
+    <div class="cm"><div class="h"></div><div class="h">Bashorat: normal</div><div class="h">Bashorat: hujum</div>
+      <div class="h">Normal</div><div class="tn">TN = {{ cm.tn|num }}</div><div class="fp">FP = {{ cm.fp|num }}</div>
+      <div class="h">Hujum</div><div class="fn">FN = {{ cm.fn|num }}</div><div class="tp">TP = {{ cm.tp|num }}</div></div>
+  </div>
+</div>
+
+<div class="grid grid-2 mt">
+  <div class="card">
+    <h2>Besh sinfli tasniflash</h2>
+    <table><thead><tr><th>Sinf</th><th class="num">Test</th><th class="num">RF Recall</th><th class="num">XGBoost Recall</th></tr></thead>
+      <tbody>{% for c, n in m.multiclass.test_counts.items() %}<tr><td>{{ CLASS_UZ.get(c, c) }} ({{ c }})</td><td class="num">{{ n|num }}</td><td class="num">{{ m.multiclass['Random Forest'].recall_by_class[c]|pct }}</td><td class="num">{{ m.multiclass['XGBoost'].recall_by_class[c]|pct }}</td></tr>{% endfor %}
+      <tr><td><b>Aniqlik / makro-F1</b></td><td></td><td class="num">{{ m.multiclass['Random Forest'].accuracy|pct }} / {{ '%.3f'|format(m.multiclass['Random Forest'].macro_f1) }}</td><td class="num">{{ m.multiclass['XGBoost'].accuracy|pct }} / {{ '%.3f'|format(m.multiclass['XGBoost'].macro_f1) }}</td></tr></tbody></table>
+    {% if m.feature_groups %}
+    <h3 class="mt">Xususiyatlar guruhlari (XGBoost)</h3>
+    <table><thead><tr><th>Guruh</th><th class="num">F1</th><th class="num">Recall</th><th class="num">FPR</th></tr></thead>
+      <tbody>{% for g, x in m.feature_groups.items() %}<tr><td>{{ g }}</td><td class="num">{{ '%.3f'|format(x.f1) }}</td><td class="num">{{ x.recall|pct }}</td><td class="num">{{ x.fpr|pct }}</td></tr>{% endfor %}</tbody></table>
+    {% endif %}
+  </div>
+  <div class="card">
+    <h2>Xususiyatlar muhimligi (Random Forest)</h2>
+    {% set mx = m.feature_importance[0].importance %}
+    {% for f in m.feature_importance %}<div class="hbar" style="grid-template-columns: 200px 1fr 60px"><code class="small">{{ f.feature }}</code><div class="track"><div class="fill" style="width: {{ (f.importance / mx * 100)|round(1) }}%"></div></div><span class="num">{{ '%.3f'|format(f.importance) }}</span></div>{% endfor %}
+    <h3 class="mt">Qaror daraxtidan olingan qoidalar (chuqurlik 3)</h3>
+    <p class="small">F1 = {{ '%.3f'|format(m.dt3.f1) }}, Recall {{ m.dt3.recall|pct }}, FPR {{ m.dt3.fpr|pct }} — signatura moduli uchun tushunarli qoidalar.</p>
+    <pre class="rules">{{ m.dt3.rules }}</pre>
+  </div>
+</div>
+
+<div class="card mt">
+  <h2>Ishchi modellar</h2>
+  <table><thead><tr><th>To‘plam</th><th>Qo‘llanilishi</th><th class="num">XGBoost F1</th><th class="num">IF F1</th><th class="num">Gibrid F1</th></tr></thead>
+    <tbody>
+      <tr><td><code>full41.joblib</code> — 41 xususiyat</td><td class="small">Yuklangan NSL-KDD fayllarini baholash</td><td class="num">{{ '%.3f'|format(m.binary['XGBoost'].f1) }}</td><td class="num">{{ '%.3f'|format(m.binary['Isolation Forest'].f1) }}</td><td class="num">{{ '%.3f'|format(m.binary['Gibrid (XGBoost + IF)'].f1) }}</td></tr>
+      <tr><td><code>zeek.joblib</code> — {{ info.features }} xususiyat</td><td class="small">Real trafik: Zeek conn.log / Suricata flow dan hisoblanadigan asosiy, vaqt va xost xususiyatlari (D-ilova). Mazmun xususiyatlari (13 ta) paket ichidan olinadi va Zeek jurnalida yo‘q.</td>
+        <td class="num">{{ '%.3f'|format(m.zeek_model['XGBoost'].f1) }}</td><td class="num">{{ '%.3f'|format(m.zeek_model['Isolation Forest'].f1) }}</td><td class="num">{{ '%.3f'|format(m.zeek_model['Gibrid (XGBoost + IF)'].f1) }}</td></tr>
+    </tbody></table>
+  <p class="small muted mt">Normal profil: {% if info.profile %}korxona trafigida o‘qitilgan ({{ info.profile.n|num }} ulanish, {{ info.profile.trained_at|replace('T', ' ') }}){% else %}o‘qitilmagan — NSL-KDD standart IF ishlatiladi{% endif %}. Modellar o‘qitilgan: {{ m.trained_at|replace('T', ' ') }}.</p>
+</div>
+{% else %}
+<div class="card"><p>Modellar topilmadi. Buyruq: <code>python train/train_models.py</code></p></div>
+{% endif %}
+{% endblock %}

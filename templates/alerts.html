@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from "_macros.html" import level, riskbar, ipcell, mitre, module with context %}
+{% block title %}Ogohlantirishlar{% endblock %}
+{% block content %}
+<div class="page-head"><div><h1>Ogohlantirishlar</h1><p>Signatura, ML, anomaliya va korrelyatsiya modullari ogohlantirishlari. Bir manbadan bir xil ogohlantirishlar 10 daqiqa ichida birlashtiriladi.</p></div></div>
+<div class="card">
+  <div class="filters">
+    <a href="{{ url_for('alerts', q=q, src=src) }}" class="{{ 'on' if not level }}">Barchasi</a>
+    {% for lv in ['high', 'medium', 'low'] %}<a href="{{ url_for('alerts', level=lv, q=q, src=src) }}" class="{{ 'on' if level == lv }}">{{ LEVEL_UZ[lv] }}</a>{% endfor %}
+    {% if src %}<span class="chip">manba/manzil: {{ src }} <a href="{{ url_for('alerts', level=level, q=q) }}">×</a></span>{% endif %}
+    <form method="get"><input type="hidden" name="level" value="{{ level }}"><input type="search" name="q" value="{{ q }}" placeholder="Nom, IP yoki T1110..."><button class="btn small">Qidirish</button></form>
+  </div>
+  {% if rows %}
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Vaqt</th><th>Ogohlantirish</th><th>Modul</th><th>Manba</th><th>Nishon</th><th>ATT&CK</th><th class="num">Soni</th><th>Risk</th><th>Daraja</th><th>Insident</th></tr></thead>
+    <tbody>{% for a in rows %}
+      <tr>
+        <td class="when">{{ a.last_ts|ts }}</td>
+        <td class="wrap"><a href="{{ url_for('alert', aid=a.id) }}">{{ a.name }}</a>{% if a.attack_class %} <span class="chip">{{ a.attack_class }}</span>{% endif %}</td>
+        <td>{{ module(a.module) }}</td><td>{{ ipcell(a.src) }}</td>
+        <td>{{ ipcell(a.dst) }}{% if a.dsts|length > 1 %}<span class="seg">+{{ a.dsts|length - 1 }} ta boshqa</span>{% endif %}</td>
+        <td>{{ mitre(a.mitre) }}</td><td class="num">{{ a.count }}</td><td>{{ riskbar(a.risk) }}</td><td>{{ level(a.level) }}</td>
+        <td>{% if a.incident_id %}<a href="{{ url_for('incident', iid=a.incident_id) }}">#{{ a.incident_id }}</a>{% else %}<span class="muted small">jurnal</span>{% endif %}</td>
+      </tr>{% endfor %}</tbody>
+  </table></div>
+  <div class="row mt">{% if page > 1 %}<a class="btn secondary small" href="{{ url_for('alerts', level=level, q=q, src=src, page=page - 1) }}">← Oldingi</a>{% endif %}
+  {% if more %}<a class="btn secondary small" href="{{ url_for('alerts', level=level, q=q, src=src, page=page + 1) }}">Keyingi →</a>{% endif %}</div>
+  {% else %}<div class="empty">Ogohlantirishlar topilmadi</div>{% endif %}
+</div>
+{% endblock %}

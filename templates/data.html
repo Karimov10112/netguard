@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Ma’lumotlar{% endblock %}
+{% block content %}
+<div class="page-head"><div><h1>Ma’lumot manbalari, simulyatsiya va normal profil</h1><p>1-qatlam: Zeek, Suricata va Wazuh jurnallarini yuklash, sinov hujumlarini simulyatsiya qilish, Isolation Forest’ni korxona trafigiga moslash.</p></div></div>
+
+<div class="grid grid-2">
+  <div class="card">
+    <h2>Sinov hujumlari simulyatsiyasi (3.10-jadval)</h2>
+    <form method="post" action="{{ url_for('data_simulate') }}">
+      <input type="hidden" name="csrf" value="{{ csrf_token }}">
+      <div class="check">
+        {% for k, s in scenarios.items() %}
+          <label><input type="checkbox" name="scenario" value="{{ k }}" checked><span>{{ s[0] }}<small>{{ s[1] }} · kutilgan javob: {{ s[3] }}</small></span></label>
+        {% endfor %}
+      </div>
+      <div class="row mt">
+        <label class="row" style="font-weight:400; margin:0"><input type="checkbox" name="normal" value="1" checked> Normal ish trafigi</label>
+        <span class="small muted">davomiyligi</span><input type="number" name="minutes" value="10" min="2" max="60"><span class="small muted">daq · seed</span><input type="number" name="seed" value="7" style="width:80px">
+      </div>
+      <button class="btn mt">▶ Simulyatsiya va tahlil</button>
+    </form>
+    <p class="small muted mt">Simulyator laboratoriyani (Kali Linux: nmap, hydra, hping3, sqlmap, dnscat2 …) almashtirmaydi — u tizim modullarini namoyish qilish va avtomatik testlar uchun Zeek/Suricata/Wazuh formatidagi yozuvlarni hosil qiladi.</p>
+  </div>
+
+  <div class="card">
+    <h2>Jurnallarni yuklash</h2>
+    <form method="post" action="{{ url_for('data_upload') }}" enctype="multipart/form-data">
+      <input type="hidden" name="csrf" value="{{ csrf_token }}">
+      <div class="dropzone"><input type="file" name="files" multiple required></div>
+      <p class="small muted">Bir nechta faylni birga tanlash mumkin (masalan, <code>conn.log</code> + <code>dns.log</code> + <code>eve.json</code> + <code>alerts.json</code>) — ular vaqt bo‘yicha birlashtirilib, korrelyatsiya qoidalari manbalar kesimida ishlaydi.</p>
+      <ul class="small" style="padding-left:18px">
+        <li><b>Zeek</b> conn.log / dns.log — TSV yoki JSON</li>
+        <li><b>Suricata</b> eve.json — <code>alert</code>, <code>flow</code>, <code>dns</code> hodisalari</li>
+        <li><b>Wazuh</b> alerts.json — autentifikatsiya va FIM (syscheck)</li>
+        <li><b>NSL-KDD</b> — KDDTest+.txt kabi fayllar 41 xususiyatli model bilan baholanadi</li>
+      </ul>
+      <label class="row" style="font-weight:400"><input type="checkbox" name="as_profile" value="1"> Bu — toza normal trafik: undan normal profil o‘qitilsin</label>
+      <button class="btn mt">Yuklash va tahlil qilish</button>
+    </form>
+  </div>
+</div>
+
+<div class="grid grid-2 mt">
+  <div class="card" id="profile">
+    <h2>Normal profil (Isolation Forest)</h2>
+    {% if profile %}
+      <div class="kv"><div>Holat</div><div><span class="ok-mark">✓ Korxona profili</span></div><div>Manba</div><div>{{ profile.source }}</div>
+        <div>Ulanishlar</div><div>{{ profile.n|num }}</div><div>contamination</div><div>{{ profile.contamination }}</div><div>O‘qitilgan</div><div>{{ profile.trained_at|replace('T', ' ') }}</div></div>
+    {% else %}
+      <p class="warn">Hozir NSL-KDD normal trafigida o‘qitilgan standart model ishlatilmoqda. U korxona trafigida ko‘proq soxta trevoga beradi (≈ 10% ulanishlar) — profilni o‘qiting.</p>
+    {% endif %}
+    <p class="small muted">Diplom (3.4-band): anomaliya moduli korxonaning o‘z normal trafigida qayta o‘qitiladi va oyiga bir marta yangilanadi. Real tizimda buning uchun hujumsiz deb tekshirilgan 1–2 haftalik conn.log ishlatiladi (yuqoridagi yuklash shaklida «toza normal trafik» belgisi).</p>
+    <form method="post" action="{{ url_for('data_profile') }}" class="row mt">
+      <input type="hidden" name="csrf" value="{{ csrf_token }}">
+      <span class="small">Simulyatsiya qilingan normal trafik:</span><input type="number" name="minutes" value="60" min="10" max="240"><span class="small">daq, contamination</span>
+      <select name="contamination" style="width:90px"><option>0.01</option><option>0.005</option><option>0.02</option><option>0.05</option></select>
+      <button class="btn secondary">O‘qitish</button>
+    </form>
+    {% if profile %}<form method="post" action="{{ url_for('data_profile') }}" class="mt"><input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="reset" value="1"><button class="btn secondary small">Standart profilga qaytish</button></form>{% endif %}
+  </div>
+  <div class="card">
+    <h2>Namunaviy fayllar</h2>
+    <p class="small muted">Real vositalar formatidagi namunalar — yuklab olib, «Jurnallarni yuklash» orqali tekshirish mumkin.</p>
+    <table><tbody>
+      {% for f in samples %}<tr><td><a href="{{ url_for('data_sample', name=f) }}"><code>{{ f }}</code></a></td></tr>{% endfor %}
+      <tr><td class="small">Yangi simulyatsiya eksporti: <a href="{{ url_for('data_export', kind='conn') }}">conn.log</a> · <a href="{{ url_for('data_export', kind='dns') }}">dns.log</a> · <a href="{{ url_for('data_export', kind='eve') }}">eve.json</a> · <a href="{{ url_for('data_export', kind='host') }}">host_events.jsonl</a></td></tr>
+    </tbody></table>
+    <form method="post" action="{{ url_for('data_reset') }}" class="mt" onsubmit="return confirm('Barcha ogohlantirishlar, insidentlar va choralar o‘chiriladi. Davom etilsinmi?')">
+      <input type="hidden" name="csrf" value="{{ csrf_token }}"><button class="btn danger small">Hodisalar bazasini tozalash</button>
+    </form>
+  </div>
+</div>
+
+<div class="card mt">
+  <h2>Tahlillar tarixi</h2>
+  {% if batches %}
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>#</th><th>Vaqt</th><th>Manba</th><th>Nomi</th><th class="num">Ulanish</th><th class="num">Suricata</th><th class="num">Xost</th><th class="num">Ogohl.</th><th class="num">Insident</th><th class="num">To‘xtatildi</th><th class="num">Vaqt, s</th></tr></thead>
+    <tbody>{% for b in batches %}
+      <tr><td><a href="{{ url_for('batch', bid=b.id) }}">#{{ b.id }}</a></td><td class="small">{{ b.created|t }}</td><td class="small">{{ b.source }}</td>
+        <td class="wrap small"><a href="{{ url_for('batch', bid=b.id) }}">{{ b.name[:110] }}</a></td><td class="num">{{ b.n_conns|num }}</td><td class="num">{{ b.n_eve }}</td><td class="num">{{ b.n_host }}</td>
+        <td class="num">{{ b.n_alerts }}</td><td class="num">{{ b.n_incidents }}</td><td class="num">{{ b.dropped|num }}</td><td class="num">{{ b.seconds }}</td></tr>
+    {% endfor %}</tbody>
+  </table></div>
+  {% else %}<div class="empty">Hali tahlil qilinmagan</div>{% endif %}
+</div>
+{% endblock %}

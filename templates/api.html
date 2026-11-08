@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}REST API{% endblock %}
+{% block content %}
+<div class="page-head"><div><h1>REST API</h1><p>Sensorlar, log yetkazuvchi va bloklash agentlari uchun interfeys. Javoblar JSON formatida.</p></div></div>
+{% if not api_key_set %}<div class="warn">API kaliti o‘rnatilmagan — API ochiq. Ishlab chiqarishda <code>NETGUARD_API_KEY</code> muhit o‘zgaruvchisini bering va so‘rovlarga <code>X-API-Key</code> sarlavhasini qo‘shing.</div>{% endif %}
+<div class="card">
+  <table>
+    <thead><tr><th>Usul</th><th>Manzil</th><th>Vazifasi</th></tr></thead>
+    <tbody>
+      <tr><td><code>GET</code></td><td><code>/api/v1/health</code></td><td>Holat, rejim, modellar</td></tr>
+      <tr><td><code>POST</code></td><td><code>/api/v1/ingest</code></td><td>Real vaqt rejimida yozuvlar: JSON-lines (Zeek JSON, Suricata EVE, Wazuh) yoki <code>{"events": [...]}</code>. Oqim holati so‘rovlar orasida saqlanadi.</td></tr>
+      <tr><td><code>GET</code></td><td><code>/api/v1/blocklist</code></td><td>Faol bloklash/karantin ro‘yxati va qolgan muddat (agent uchun)</td></tr>
+      <tr><td><code>GET</code></td><td><code>/api/v1/alerts?level=high&amp;limit=100</code></td><td>Ogohlantirishlar</td></tr>
+      <tr><td><code>GET</code></td><td><code>/api/v1/incidents?status=open</code></td><td>Insidentlar</td></tr>
+      <tr><td><code>GET</code></td><td><code>/api/v1/incidents/&lt;id&gt;</code></td><td>Insident, uning ogohlantirishlari va choralari</td></tr>
+      <tr><td><code>POST</code></td><td><code>/api/v1/actions/&lt;id&gt;/revoke</code></td><td>Chorani bekor qilish</td></tr>
+      <tr><td><code>GET</code></td><td><code>/api/v1/stats</code></td><td>Boshqaruv paneli statistikasi</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="grid grid-2 mt">
+  <div class="card">
+    <h2>Misol: Zeek yozuvini yuborish</h2>
+<pre>curl -X POST http://127.0.0.1:5000/api/v1/ingest \
+  -H "Content-Type: application/x-ndjson" \
+  -H "X-API-Key: $NETGUARD_API_KEY" \
+  --data-binary @/opt/zeek/logs/current/conn.log</pre>
+<pre>{"events": [
+ {"ts": 1762560000.1, "uid": "C1", "id.orig_h": "45.155.205.233",
+  "id.orig_p": 40123, "id.resp_h": "10.0.2.10", "id.resp_p": 22,
+  "proto": "tcp", "duration": 0, "orig_bytes": 0,
+  "resp_bytes": 0, "conn_state": "REJ"}
+]}</pre>
+  </div>
+  <div class="card">
+    <h2>Integratsiya skriptlari</h2>
+    <ul class="small" style="padding-left:18px">
+      <li><code>integrations/log_shipper.py</code> — Zeek <code>conn.log</code>/<code>dns.log</code> (JSON), Suricata <code>eve.json</code>, Wazuh <code>alerts.json</code> fayllarini kuzatib, yangi yozuvlarni <code>/api/v1/ingest</code> ga yuboradi.</li>
+      <li><code>integrations/blocker_agent.py</code> — <code>/api/v1/blocklist</code> ni so‘rab, ipset ro‘yxatlarini sinxronlaydi (B-ilova; <code>--dry-run</code> rejimi bor).</li>
+      <li><code>integrations/eve_blocker.py</code> — diplom B-ilovasidagi mustaqil skript: eve.json → risk → ipset.</li>
+      <li><code>integrations/suricata/local.rules</code> — C-ilova qoidalari.</li>
+    </ul>
+<pre>sudo python integrations/blocker_agent.py \
+  --server http://soc:5000 --interval 10</pre>
+  </div>
+</div>
+{% endblock %}

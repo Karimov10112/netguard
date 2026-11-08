@@ -1,0 +1,22 @@
+# NetGuard — korxona tarmog‘i uchun Suricata qoidalari (diplom ishi, C-ilova)
+# ET Open bazasiga qo‘shimcha sifatida /etc/suricata/rules/local.rules fayliga joylashtiriladi.
+# suricata.yaml:  vars.address-groups.USER_NET: "[10.0.10.0/23]"
+# Har bir qoida avval faqat "alert" rejimida kamida 2 hafta sinab ko‘riladi, keyin kerak bo‘lsa "drop" ga o‘tkaziladi.
+
+# 1. Ichki tarmoqda port skanerlash (bir manbadan 30 soniyada 50+ SYN)
+alert tcp $HOME_NET any -> $HOME_NET any (msg:"Ichki port skanerlash"; flags:S; threshold: type both, track by_src, count 50, seconds 30; classtype:attempted-recon; sid:1000010; rev:1;)
+
+# 2. RDP ga parol tanlash (tashqi manbadan)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 3389 (msg:"RDP brute force"; flow:to_server; flags:S; threshold: type both, track by_src, count 15, seconds 60; classtype:attempted-admin; sid:1000011; rev:1;)
+
+# 3. Ishchi stansiyalar o'rtasida SMB (gorizontal harakat belgisi)
+alert tcp $USER_NET any -> $USER_NET 445 (msg:"Stansiyalararo SMB ulanish"; flow:to_server,established; threshold: type limit, track by_src, count 1, seconds 300; classtype:policy-violation; sid:1000012; rev:1;)
+
+# 4. Juda uzun DNS so'rovi (DNS tunnel ehtimoli)
+alert dns $HOME_NET any -> any 53 (msg:"Shubhali uzun DNS so'rovi"; dns.query; content:"."; pcre:"/^[a-z0-9]{50,}\./i"; classtype:bad-unknown; sid:1000013; rev:1;)
+
+# 5. SSH ga parol tanlash (qo‘shimcha)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"SSH brute force"; flow:to_server; flags:S; threshold: type both, track by_src, count 15, seconds 60; classtype:attempted-admin; sid:1000014; rev:1;)
+
+# 6. SYN flood (qo‘shimcha): bitta nishonga 2 soniyada 100+ SYN
+alert tcp any any -> $HOME_NET any (msg:"SYN flood"; flags:S,12; threshold: type both, track by_dst, count 100, seconds 2; classtype:attempted-dos; sid:1000015; rev:1;)

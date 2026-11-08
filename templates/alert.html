@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from "_macros.html" import level, riskbar, ipcell, mitre, module with context %}
+{% block title %}Ogohlantirish #{{ a.id }}{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div><h1>{{ a.name }}</h1><p>Ogohlantirish #{{ a.id }} · {{ a.first_ts|t }} — {{ a.last_ts|t }} · {{ a.count }} marta</p></div>
+  <div class="row">{{ module(a.module) }} {{ level(a.level) }} {% if inc %}<a class="btn small" href="{{ url_for('incident', iid=inc.id) }}">Insident #{{ inc.id }} →</a>{% endif %}</div>
+</div>
+<div class="grid grid-main">
+  <div class="card">
+    <h2>Tafsilotlar</h2>
+    <div class="kv">
+      <div>Manba</div><div>{{ ipcell(a.src) }}</div>
+      <div>Nishon</div><div>{% for d in a.dsts[:20] %}<span class="ip">{{ d }}</span>{{ ', ' if not loop.last }}{% endfor %}{% if a.dsts|length > 20 %} …{% endif %}</div>
+      {% if a.dport %}<div>Port / protokol</div><div>{{ a.dport }} / {{ a.proto }}</div>{% endif %}
+      {% if a.sid %}<div>Qoida (sid)</div><div><code>{{ a.sid }}</code> {{ a.category }}</div>{% endif %}
+      {% if a.mitre %}<div>MITRE ATT&CK</div><div>{{ mitre(a.mitre) }} {{ MITRE.get(a.mitre, ('', ''))[0] }} — {{ TACTIC_UZ.get(MITRE.get(a.mitre, ('', ''))[1], '') }}</div>{% endif %}
+      {% if a.attack_class %}<div>Hujum turi (ML)</div><div>{{ CLASS_UZ.get(a.attack_class, a.attack_class) }} ({{ a.attack_class }})</div>{% endif %}
+      {% for k, v in a.detail.items() %}<div>{{ k }}</div><div class="wrap"><code>{{ v }}</code></div>{% endfor %}
+    </div>
+  </div>
+  <div class="card">
+    <h2>Risk balli: {{ riskbar(a.risk) }}</h2>
+    <div class="formula">Risk = 0,4·S_sig + 0,3·P_XGB + 0,2·S_IF + 0,1·S_aktiv &nbsp;(3.2)</div>
+    <table class="mt"><thead><tr><th>Komponent</th><th class="num">Qiymat</th><th class="num">Hissa</th></tr></thead>
+      <tbody>{% for name, v, w, c in parts %}<tr><td class="small">{{ name }}</td><td class="num">{{ v|f2 }}</td><td class="num">{{ '%.3f'|format(c) }}</td></tr>{% endfor %}</tbody></table>
+    <p class="small muted mt">Gibrid qoida (3.1): ogohlantirish = Sig ∨ [P_XGB ≥ 0,5] ∨ [IF anomaliya]. {{ LEVEL_ACTION_UZ[a.level] }}.</p>
+  </div>
+</div>
+{% endblock %}

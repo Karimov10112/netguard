@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% from "_macros.html" import level, riskbar, ipcell, mitre with context %}
+{% block title %}Boshqaruv paneli{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div><h1>Xavfsizlik monitoringi markazi (SOC)</h1><p>Korxona tarmog‘i holati: aniqlangan hujumlar, insidentlar va avtomatik javob choralari.</p></div>
+  <form method="post" action="{{ url_for('data_simulate') }}" class="row">
+    <input type="hidden" name="csrf" value="{{ csrf_token }}"><input type="hidden" name="normal" value="1"><input type="hidden" name="minutes" value="10">
+    {% for k in scenarios_all or ['portscan','bruteforce','synflood','sqli','lateral','dnstunnel','unknown','beaconing','exfiltration','ransomware'] %}<input type="hidden" name="scenario" value="{{ k }}">{% endfor %}
+    <button class="btn">▶ Barcha sinov hujumlarini simulyatsiya qilish</button>
+  </form>
+</div>
+
+{% if not s.conns and not s.alerts %}
+<div class="card note mb">Hozircha ma’lumot yo‘q. Yuqoridagi tugma 10 daqiqalik normal korxona trafigi va diplomdagi 10 ta sinov hujumini (3.10-jadval) simulyatsiya qiladi. Real jurnallarni (Zeek conn.log, Suricata eve.json, Wazuh alerts.json) <a href="{{ url_for('data') }}">Ma’lumotlar</a> sahifasidan yuklash yoki <a href="{{ url_for('api_docs') }}">REST API</a> orqali yuborish mumkin.</div>
+{% endif %}
+
+<div class="grid grid-6 mt">
+  <div class="card stat"><div class="l">Tahlil qilingan ulanishlar</div><div class="v blue">{{ s.conns|num }}</div><div class="sub">{{ s.bytes|size }} trafik</div></div>
+  <div class="card stat"><div class="l">Ogohlantirishlar</div><div class="v">{{ s.alerts|num }}</div><div class="sub"><span style="color:var(--red)">{{ s.alert_levels.get('high', 0) }} yuqori</span> · {{ s.alert_levels.get('medium', 0) }} o‘rta · {{ s.alert_levels.get('low', 0) }} past</div></div>
+  <div class="card stat"><div class="l">Ochiq insidentlar</div><div class="v red">{{ s.incidents_open }}</div><div class="sub">{{ s.incident_levels.get('high', 0) }} yuqori · {{ s.incident_levels.get('medium', 0) }} o‘rta</div></div>
+  <div class="card stat"><div class="l">Faol bloklash / karantin</div><div class="v amber">{{ s.actions_active }}</div><div class="sub">TTL {{ C.BLOCK_TTL_H }} soat</div></div>
+  <div class="card stat"><div class="l">IPS to‘xtatgan ulanishlar</div><div class="v green">{{ s.dropped|num }}</div><div class="sub">bloklangandan keyingi urinishlar</div></div>
+  <div class="card stat"><div class="l">MTTD / MTTR</div><div class="v" style="font-size:1.35rem">{{ s.mttd|dur }} / {{ s.mttr|dur }}</div><div class="sub">aniqlash / javob (o‘rtacha)</div></div>
+</div>
+
+<div class="grid grid-main mt">
+  <div>
+    <div class="card">
+      <h2>Trafik va ogohlantirishlar (daqiqalar bo‘yicha)</h2>
+      {% if traffic %}
+      {% set mx = (traffic|map(attribute='conns')|max) or 1 %}
+      {% set ma = (traffic|map(attribute='alerts')|max) or 1 %}
+      {% set w = 760 / (traffic|length) %}
+      <svg viewBox="0 0 800 210" width="100%" role="img" aria-label="Trafik grafigi">
+        <line x1="34" y1="170" x2="796" y2="170" stroke="#cfd7e3"/>
+        <text x="30" y="24" font-size="9" text-anchor="end" fill="#5d6b7e">{{ mx }}</text><text x="30" y="170" font-size="9" text-anchor="end" fill="#5d6b7e">0</text>
+        {% for b in traffic %}
+          {% set x = 36 + loop.index0 * w %}
+          {% set h = b.conns / mx * 145 %}{% set hd = b.dropped / mx * 145 %}
+          <rect x="{{ x|round(1) }}" y="{{ (170 - h)|round(1) }}" width="{{ (w * 0.8)|round(1) }}" height="{{ h|round(1) }}" fill="#9db9e6"><title>{{ b.bucket|t }} — {{ b.conns }} ulanish, {{ b.alerts }} ogohlantirish, {{ b.dropped }} to‘xtatildi</title></rect>
+          {% if b.dropped %}<rect x="{{ x|round(1) }}" y="{{ (170 - hd)|round(1) }}" width="{{ (w * 0.8)|round(1) }}" height="{{ hd|round(1) }}" fill="#0e8a7d"/>{% endif %}
+          {% if b.alerts %}<circle cx="{{ (x + w * 0.4)|round(1) }}" cy="{{ (170 - (b.alerts / ma) * 145)|round(1) }}" r="3.2" fill="#cf3b3b"/>{% endif %}
+          {% if loop.index0 % ((traffic|length // 6) or 1) == 0 %}<text x="{{ (x + w * 0.4)|round(1) }}" y="186" font-size="9" text-anchor="middle" fill="#5d6b7e">{{ b.bucket|hm }}</text>{% endif %}
+        {% endfor %}
+      </svg>
+      <div class="legend"><span style="--c:#9db9e6">Ulanishlar</span><span style="--c:#0e8a7d">IPS to‘xtatgan</span><span style="--c:#cf3b3b">Ogohlantirishlar (o‘ng shkala)</span></div>
+      {% else %}<div class="empty">Trafik ma’lumotlari yo‘q</div>{% endif %}
+    </div>
+
+    <div class="card mt">
+      <div class="row" style="justify-content:space-between"><h2 class="mb0">Ochiq insidentlar</h2><a href="{{ url_for('incidents') }}" class="small">Barchasi →</a></div>
+      {% if incs %}
+      <div class="tbl-wrap"><table class="mt">
+        <thead><tr><th>#</th><th>Insident</th><th>Subyekt</th><th>ATT&CK</th><th>Risk</th><th>Daraja</th><th>Oxirgi faollik</th></tr></thead>
+        <tbody>{% for i in incs %}
+          <tr><td><a href="{{ url_for('incident', iid=i.id) }}">#{{ i.id }}</a></td>
+            <td class="wrap"><a href="{{ url_for('incident', iid=i.id) }}">{{ i.title }}</a></td>
+            <td>{{ ipcell(i.entity) }}</td><td>{% for t in i.mitre[:3] %}{{ mitre(t) }}{% endfor %}</td>
+            <td>{{ riskbar(i.risk) }}</td><td>{{ level(i.level) }}</td><td class="when">{{ i.last_ts|ts }}</td></tr>
+        {% endfor %}</tbody>
+      </table></div>
+      {% else %}<div class="empty">Ochiq insidentlar yo‘q</div>{% endif %}
+    </div>
+  </div>
+
+  <div>
+    <div class="card">
+      <h2>Eng xavfli manbalar</h2>
+      {% for r in s.top_src %}
+        <div class="row" style="justify-content:space-between; border-bottom:1px dashed var(--line); padding:6px 0">
+          <a href="{{ url_for('alerts', src=r.src) }}">{{ ipcell(r.src) }}</a>
+          <span class="small muted">{{ r.k }} ogoh., {{ r.n }} hodisa</span>{{ riskbar(r.risk) }}
+        </div>
+      {% else %}<div class="empty">—</div>{% endfor %}
+    </div>
+    <div class="card mt">
+      <h2>MITRE ATT&CK taktikalari</h2>
+      {% set tot = (tactics.values()|sum) or 1 %}
+      {% for t, n in tactics|dictsort(by='value', reverse=true) %}
+        <div class="hbar" style="grid-template-columns: 170px 1fr 40px"><span class="small">{{ TACTIC_UZ.get(t, t) }}</span><div class="track"><div class="fill" style="width: {{ (n / tot * 100)|round(1) }}%; background:#1d2b44"></div></div><span class="num">{{ n }}</span></div>
+      {% else %}<div class="empty">—</div>{% endfor %}
+    </div>
+    <div class="card mt">
+      <h2>Aniqlovchi modullar</h2>
+      {% set tot = (s.by_module.values()|sum) or 1 %}
+      {% for m, n in s.by_module|dictsort(by='value', reverse=true) %}
+        <div class="hbar" style="grid-template-columns: 170px 1fr 40px"><span class="small">{{ MODULE_UZ.get(m, m) }}</span><div class="track"><div class="fill" style="width: {{ (n / tot * 100)|round(1) }}%"></div></div><span class="num">{{ n }}</span></div>
+      {% else %}<div class="empty">—</div>{% endfor %}
+      {% if s.by_class %}<h3 class="mt">ML bo‘yicha hujum turlari</h3><div class="chips">{% for c, n in s.by_class.items() %}<span class="chip">{{ c }}: {{ n }}</span>{% endfor %}</div>{% endif %}
+    </div>
+    <div class="card mt small">
+      <h3>Holat</h3>
+      <div class="kv"><div>Rejim</div><div>{{ 'IPS — choralar avtomatik qo‘llanadi' if mode == 'ips' else 'IDS — faqat monitoring' }}</div>
+      <div>Normal profil</div><div>{% if profile %}{{ profile.n|num }} ulanish ({{ profile.trained_at[:16]|replace('T', ' ') }}){% else %}<span style="color:#a06c00">NSL-KDD standart profili</span> — <a href="{{ url_for('data') }}#profile">o‘qitish</a>{% endif %}</div>
+      <div>Oxirgi tahlil</div><div>{% if batches %}<a href="{{ url_for('batch', bid=batches[0].id) }}">{{ batches[0].name[:60] }}</a>{% else %}—{% endif %}</div></div>
+    </div>
+  </div>
+</div>
+{% endblock %}

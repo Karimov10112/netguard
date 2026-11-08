@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% from "_macros.html" import level, riskbar, ipcell with context %}
+{% block title %}Tahlil #{{ b.id }}{% endblock %}
+{% block content %}
+{% set s = b.summary %}
+<div class="page-head">
+  <div><h1>Tahlil #{{ b.id }}</h1><p>{{ b.name }} · {{ b.created|t }} · {{ b.seconds }} s</p></div>
+  <div class="row"><a class="btn secondary" href="{{ url_for('data') }}">← Ma’lumotlar</a>{% if not s.nsl %}<a class="btn" href="{{ url_for('incidents') }}">Insidentlar →</a>{% endif %}</div>
+</div>
+
+{% if s.nsl %}
+{% set n = s.nsl %}
+<div class="grid grid-4">
+  <div class="card stat"><div class="l">Yozuvlar</div><div class="v">{{ n.n|num }}</div></div>
+  <div class="card stat"><div class="l">Hujum deb topildi (3.1)</div><div class="v red">{{ n.flagged|num }}</div><div class="sub">XGBoost: {{ n.flagged_xgb|num }} · faqat IF: {{ n.flagged_if_only|num }}</div></div>
+  <div class="card stat"><div class="l">Risk darajalari</div><div class="v" style="font-size:1.1rem">{% for k in ['high','medium','low'] %}{{ LEVEL_UZ[k] }}: {{ n.risk_levels.get(k, 0)|num }}<br>{% endfor %}</div></div>
+  <div class="card stat"><div class="l">Tezlik</div><div class="v blue">{{ n.ms_per_1000 }}</div><div class="sub">ms / 1000 yozuv</div></div>
+</div>
+{% if n.metrics %}
+<div class="grid grid-2 mt">
+  <div class="card">
+    <h2>Natijalar (yorliqlar bo‘yicha)</h2>
+    <table><thead><tr><th>Model</th><th class="num">Accuracy</th><th class="num">Precision</th><th class="num">Recall</th><th class="num">F1</th><th class="num">FPR</th></tr></thead>
+      <tbody>{% for k, m in n.metrics.items() %}<tr class="{{ 'best' if 'Gibrid' in k }}"><td>{{ k }}</td><td class="num">{{ m.accuracy|pct }}</td><td class="num">{{ '%.4f'|format(m.precision) }}</td><td class="num">{{ '%.4f'|format(m.recall) }}</td><td class="num"><b>{{ '%.4f'|format(m.f1) }}</b></td><td class="num">{{ m.fpr|pct }}</td></tr>{% endfor %}</tbody></table>
+    {% set cm = n.metrics['Gibrid (XGBoost + IF)'].confusion %}
+    <h3 class="mt">Gibrid model xatoliklar matritsasi</h3>
+    <div class="cm"><div class="h"></div><div class="h">Bashorat: normal</div><div class="h">Bashorat: hujum</div>
+      <div class="h">Haqiqiy: normal</div><div class="tn">TN = {{ cm.tn|num }}</div><div class="fp">FP = {{ cm.fp|num }}</div>
+      <div class="h">Haqiqiy: hujum</div><div class="fn">FN = {{ cm.fn|num }}</div><div class="tp">TP = {{ cm.tp|num }}</div></div>
+  </div>
+  <div class="card">
+    <h2>Hujum sinflari bo‘yicha</h2>
+    <table><thead><tr><th>Sinf</th><th class="num">Yozuv</th><th class="num">Aniqlandi</th><th class="num">Turi to‘g‘ri</th></tr></thead>
+      <tbody>{% for c, x in n.by_class.items() %}<tr><td>{{ CLASS_UZ.get(c, c) }} ({{ c }})</td><td class="num">{{ x.n|num }}</td>
+        <td class="num">{% if x.detected is not none %}{{ x.detected|num }} ({{ (x.detected / x.n)|pct }}){% else %}—{% endif %}</td><td class="num">{{ x.type_correct|num }} ({{ (x.type_correct / x.n)|pct }})</td></tr>{% endfor %}</tbody></table>
+    <p class="small muted mt">R2L va U2R hujumlari tarmoq xususiyatlarida normal trafikka o‘xshaydi, shuning uchun ularni aniqlashda xost darajasidagi manbalar (Wazuh) va korrelyatsiya qoidalari muhim (diplom, 3.2-band xulosalari).</p>
+    <h3>Eng ko‘p uchragan yorliqlar</h3><div class="chips">{% for l, c in n.labels_top %}<span class="chip">{{ l }}: {{ c }}</span>{% endfor %}</div>
+  </div>
+</div>
+{% endif %}
+<div class="card mt">
+  <h2>Eng yuqori riskli yozuvlar</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Qator</th><th>Protokol</th><th>Xizmat</th><th>Flag</th><th class="num">src_bytes</th><th class="num">P_XGB</th><th class="num">S_IF</th><th>Turi (ML)</th><th>Risk</th>{% if n.top and n.top[0].label %}<th>Haqiqiy yorliq</th>{% endif %}</tr></thead>
+    <tbody>{% for r in n.top %}<tr><td class="num">{{ r.i }}</td><td>{{ r.protocol }}</td><td>{{ r.service }}</td><td>{{ r.flag }}</td><td class="num">{{ r.src_bytes|num }}</td><td class="num">{{ r.p }}</td><td class="num">{{ r.s }}</td><td>{{ r.cls }}</td><td>{{ riskbar(r.risk) }}</td>{% if r.label %}<td>{{ r.label }}</td>{% endif %}</tr>{% endfor %}</tbody></table></div>
+  <p class="small muted">NSL-KDD yozuvlarida signatura va aktiv ma’lumoti yo‘q, shuning uchun risk faqat ML komponentlaridan (S_aktiv = {{ C.DEFAULT_ASSET }}) hisoblangan.</p>
+</div>
+{% else %}
+
+<div class="grid grid-6">
+  <div class="card stat"><div class="l">Ulanishlar</div><div class="v blue">{{ b.n_conns|num }}</div></div>
+  <div class="card stat"><div class="l">Suricata / xost hodisalari</div><div class="v">{{ b.n_eve }} / {{ b.n_host }}</div></div>
+  <div class="card stat"><div class="l">Ogohlantirishlar</div><div class="v">{{ b.n_alerts }}</div><div class="sub">{% for k in ['high','medium','low'] %}{{ LEVEL_UZ[k] }} {{ s.levels.get(k, 0) }}{{ ' · ' if not loop.last }}{% endfor %}</div></div>
+  <div class="card stat"><div class="l">Insidentlar</div><div class="v red">{{ b.n_incidents }}</div></div>
+  <div class="card stat"><div class="l">IPS to‘xtatgan</div><div class="v green">{{ b.dropped|num }}</div><div class="sub">ulanish / urinish</div></div>
+  <div class="card stat"><div class="l">Rejim</div><div class="v" style="font-size:1.2rem">{{ 'IPS' if s.mode == 'ips' else 'IDS' }}</div><div class="sub">{{ 'faol himoya' if s.mode == 'ips' else 'faqat monitoring' }}</div></div>
+</div>
+
+{% if s.scenarios %}
+<div class="card mt">
+  <h2>Sinov stsenariylari natijalari</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Sinov hujumi</th><th>Vosita</th><th>Kutilgan modul / javob</th><th>Manba</th><th>Natija</th><th>Risk</th><th>Qoidalar</th><th>Qo‘llangan choralar</th><th class="num">MTTD</th></tr></thead>
+    <tbody>{% for k, r in s.scenarios.items() %}
+      <tr><td><b>{{ scenarios[k][0] }}</b></td><td class="small">{{ scenarios[k][1] }}</td><td class="small">{{ scenarios[k][2] }}<br><i>{{ scenarios[k][3] }}</i></td>
+        <td>{{ ipcell(r.source) }}</td>
+        <td>{% if r.detected %}<span class="ok-mark">✓ aniqlandi</span><br>{{ level(r.level) }}{% else %}<span class="no-mark">✗ aniqlanmadi</span>{% endif %}</td>
+        <td>{{ riskbar(r.risk) }}</td>
+        <td>{% for x in r.rules %}<span class="chip" title="{{ RULES[x][0] }}">{{ x }}</span> {% endfor %}</td>
+        <td class="small">{% for a in r.actions %}{{ ACTION_UZ.get(a[0], a[0]) }}: <span class="ip">{{ a[1] }}</span> <span class="pill st-{{ a[2] }}">{{ STATUS_UZ.get(a[2], a[2]) }}</span><br>{% endfor %}</td>
+        <td class="num">{{ r.mttd|dur }}</td></tr>
+    {% endfor %}</tbody>
+  </table></div>
+  {% set det = s.scenarios.values()|selectattr('detected')|list|length %}
+  <p class="mt"><b>{{ det }} / {{ s.scenarios|length }}</b> stsenariy aniqlandi. MTTD — subyektning birinchi ogohlantirishidan insident darajasiga (risk ≥ {{ C.LEVEL_MEDIUM }}) yetguncha o‘tgan vaqt (hodisa vaqti bo‘yicha). Bir manbadan bajarilgan stsenariylar (masalan, skanerlash va SQL in’eksiya) bitta insidentga birlashtiriladi.</p>
+</div>
+{% endif %}
+
+<div class="card mt">
+  <h2>Subyektlar bo‘yicha qarorlar</h2>
+  {% if s.entities %}
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Subyekt</th><th>Insident</th><th>Risk</th><th>Daraja</th><th>Qoidalar</th><th>Choralar</th><th class="num">MTTD</th><th class="num">MTTR</th></tr></thead>
+    <tbody>
+    {% for k, e in s.entities.items()|sort(attribute='1.risk', reverse=true) %}
+      <tr><td>{{ ipcell(k) }}</td><td class="wrap">{% if e.incident %}<a href="{{ url_for('incident', iid=e.incident) }}">#{{ e.incident }} {{ e.title }}</a>{% else %}{{ e.title }}{% endif %}</td>
+        <td>{{ riskbar(e.risk) }}</td><td>{{ level(e.level) }}</td><td>{% for x in e.rules %}<span class="chip">{{ x }}</span> {% endfor %}</td>
+        <td class="small">{% for a in e.actions %}{{ ACTION_UZ.get(a[0], a[0]) }} → <span class="ip">{{ a[1] }}</span> ({{ STATUS_UZ.get(a[2], a[2])|lower }})<br>{% endfor %}</td>
+        <td class="num">{{ e.mttd|dur }}</td><td class="num">{{ e.mttr|dur }}</td></tr>
+    {% endfor %}</tbody>
+  </table></div>
+  {% else %}<div class="empty">O‘rta yoki yuqori xavfli subyektlar aniqlanmadi — barcha ogohlantirishlar faqat jurnalga yozildi.</div>{% endif %}
+</div>
+{% endif %}
+{% endblock %}

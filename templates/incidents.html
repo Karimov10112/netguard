@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from "_macros.html" import level, riskbar, ipcell, mitre with context %}
+{% block title %}Insidentlar{% endblock %}
+{% block content %}
+<div class="page-head"><div><h1>Insidentlar (hodisa kartalari)</h1><p>Risk balli ≥ {{ C.LEVEL_MEDIUM|string|replace('.', ',') }} bo‘lgan yoki SIEM korrelyatsiya qoidasi ishlagan subyektlar. Bitta manba bo‘yicha 24 soat ichidagi ogohlantirishlar bitta insidentga birlashtiriladi.</p></div></div>
+<div class="card">
+  <div class="filters">
+    <a href="{{ url_for('incidents', level=level) }}" class="{{ 'on' if not status }}">Barchasi</a>
+    {% for k, v in INC_STATUS_UZ.items() %}<a href="{{ url_for('incidents', status=k, level=level) }}" class="{{ 'on' if status == k }}">{{ v }}</a>{% endfor %}
+    <span class="muted small" style="margin-left:12px">Daraja:</span>
+    {% for lv in ['high', 'medium'] %}<a href="{{ url_for('incidents', status=status, level=lv if level != lv else '') }}" class="{{ 'on' if level == lv }}">{{ LEVEL_UZ[lv] }}</a>{% endfor %}
+  </div>
+  {% if rows %}
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>#</th><th>Insident</th><th>Subyekt</th><th>Qoidalar</th><th>ATT&CK</th><th>Risk</th><th>Daraja</th><th>Holat</th><th>MTTD</th><th>Vaqt</th></tr></thead>
+    <tbody>{% for i in rows %}
+      <tr><td><a href="{{ url_for('incident', iid=i.id) }}">#{{ i.id }}</a></td>
+        <td class="wrap"><a href="{{ url_for('incident', iid=i.id) }}">{{ i.title }}</a></td>
+        <td>{{ ipcell(i.entity) }}</td>
+        <td>{% for r in i.rules %}<span class="chip" title="{{ RULES[r][0] }}">{{ r }}</span> {% endfor %}</td>
+        <td>{% for t in i.mitre[:4] %}{{ mitre(t) }}{% endfor %}</td>
+        <td>{{ riskbar(i.risk) }}</td><td>{{ level(i.level) }}</td>
+        <td><span class="pill {{ i.status }}">{{ INC_STATUS_UZ[i.status] }}</span></td>
+        <td class="num">{{ (i.detected_ts - i.first_ts)|dur if i.detected_ts else '—' }}</td>
+        <td class="when">{{ i.first_ts|ts }}</td></tr>
+    {% endfor %}</tbody>
+  </table></div>
+  {% else %}<div class="empty">Insidentlar yo‘q</div>{% endif %}
+</div>
+{% endblock %}

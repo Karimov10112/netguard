@@ -1,0 +1,803 @@
+{"ts": 1779080403.433665, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_256.xlsx", "action": "modified", "src": "10.0.10.55", "user": "user43"}
+{"ts": 1779080403.875422, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_156.xlsx", "action": "modified", "src": "10.0.10.27", "user": "user44"}
+{"ts": 1779080406.2731931, "type": "auth", "result": "failure", "user": "user31", "src": "10.0.10.18", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080407.7334578, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_235.xlsx", "action": "modified", "src": "10.0.10.16", "user": "user40"}
+{"ts": 1779080408.1714752, "type": "auth", "result": "failure", "user": "user46", "src": "10.0.10.36", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080409.1045878, "type": "auth", "result": "success", "user": "user14", "src": "10.0.10.25", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080409.9930375, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_276.xlsx", "action": "modified", "src": "10.0.10.22", "user": "user08"}
+{"ts": 1779080415.0676022, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_75.xlsx", "action": "modified", "src": "10.0.10.50", "user": "user46"}
+{"ts": 1779080415.542668, "type": "auth", "result": "failure", "user": "user20", "src": "10.0.10.45", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080424.0945845, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_85.xlsx", "action": "modified", "src": "10.0.10.19", "user": "user00"}
+{"ts": 1779080427.4273922, "type": "auth", "result": "failure", "user": "user21", "src": "10.0.10.47", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080428.2481074, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_245.xlsx", "action": "modified", "src": "10.0.10.42", "user": "user22"}
+{"ts": 1779080428.366627, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_166.xlsx", "action": "modified", "src": "10.0.10.56", "user": "user30"}
+{"ts": 1779080431.6064322, "type": "auth", "result": "success", "user": "user49", "src": "10.0.10.60", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080431.6586971, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_48.xlsx", "action": "modified", "src": "10.0.10.60", "user": "user05"}
+{"ts": 1779080432.904334, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_50.xlsx", "action": "modified", "src": "10.0.10.23", "user": "user34"}
+{"ts": 1779080433.4630647, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_132.xlsx", "action": "modified", "src": "10.0.10.31", "user": "user45"}
+{"ts": 1779080439.3970232, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_271.xlsx", "action": "modified", "src": "10.0.10.13", "user": "user18"}
+{"ts": 1779080439.5315886, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_251.xlsx", "action": "modified", "src": "10.0.10.45", "user": "user35"}
+{"ts": 1779080441.0492933, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_128.xlsx", "action": "modified", "src": "10.0.10.22", "user": "user20"}
+{"ts": 1779080443.9726431, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_196.xlsx", "action": "modified", "src": "10.0.10.13", "user": "user38"}
+{"ts": 1779080444.772458, "type": "auth", "result": "success", "user": "user23", "src": "10.0.10.34", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080446.5691128, "type": "auth", "result": "failure", "user": "user29", "src": "10.0.10.48", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080448.0625885, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_275.xlsx", "action": "modified", "src": "10.0.10.57", "user": "user20"}
+{"ts": 1779080456.651761, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_128.xlsx", "action": "modified", "src": "10.0.10.28", "user": "user31"}
+{"ts": 1779080459.0409615, "type": "auth", "result": "failure", "user": "user27", "src": "10.0.10.36", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080461.2138753, "type": "auth", "result": "success", "user": "user32", "src": "10.0.10.43", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080461.436883, "type": "auth", "result": "success", "user": "user25", "src": "10.0.10.36", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080464.127952, "type": "auth", "result": "success", "user": "user36", "src": "10.0.10.47", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080467.377312, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_27.xlsx", "action": "modified", "src": "10.0.10.54", "user": "user36"}
+{"ts": 1779080469.2882454, "type": "auth", "result": "failure", "user": "user10", "src": "10.0.10.16", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080472.6030843, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_254.xlsx", "action": "modified", "src": "10.0.10.14", "user": "user03"}
+{"ts": 1779080478.7466109, "type": "auth", "result": "failure", "user": "user32", "src": "10.0.10.26", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080479.6311786, "type": "auth", "result": "success", "user": "user09", "src": "10.0.10.20", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080481.257714, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_47.xlsx", "action": "modified", "src": "10.0.10.11", "user": "user37"}
+{"ts": 1779080485.8695984, "type": "auth", "result": "failure", "user": "user07", "src": "10.0.10.16", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080486.707618, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_93.xlsx", "action": "modified", "src": "10.0.10.30", "user": "user11"}
+{"ts": 1779080487.2979407, "type": "auth", "result": "failure", "user": "user45", "src": "10.0.10.20", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080487.3581598, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_7.xlsx", "action": "modified", "src": "10.0.10.20", "user": "user42"}
+{"ts": 1779080492.1791627, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_173.xlsx", "action": "modified", "src": "10.0.10.54", "user": "user04"}
+{"ts": 1779080492.5352783, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_255.xlsx", "action": "modified", "src": "10.0.10.37", "user": "user34"}
+{"ts": 1779080493.0508506, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_55.xlsx", "action": "modified", "src": "10.0.10.17", "user": "user18"}
+{"ts": 1779080498.7420197, "type": "auth", "result": "success", "user": "user35", "src": "10.0.10.46", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080498.753106, "type": "auth", "result": "success", "user": "user26", "src": "10.0.10.37", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080499.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080499.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080500.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080500.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080501.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080501.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080502.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080502.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080503.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080503.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080504.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080504.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080505.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080505.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080506.0264733, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_82.xlsx", "action": "modified", "src": "10.0.10.30", "user": "user17"}
+{"ts": 1779080506.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080506.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080506.7495933, "type": "auth", "result": "failure", "user": "user27", "src": "10.0.10.44", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080507.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080507.6375067, "type": "auth", "result": "success", "user": "user01", "src": "10.0.10.12", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080507.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080508.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080508.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080509.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080509.4762216, "type": "auth", "result": "failure", "user": "user28", "src": "10.0.10.19", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080509.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080509.714257, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_153.xlsx", "action": "modified", "src": "10.0.10.50", "user": "user33"}
+{"ts": 1779080510.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080510.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080511.0241158, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_59.xlsx", "action": "modified", "src": "10.0.10.35", "user": "user21"}
+{"ts": 1779080511.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080511.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080512.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080512.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080512.7325094, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_8.xlsx", "action": "modified", "src": "10.0.10.39", "user": "user25"}
+{"ts": 1779080513.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080513.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080514.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080514.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080515.0712845, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_145.xlsx", "action": "modified", "src": "10.0.10.54", "user": "user40"}
+{"ts": 1779080515.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080515.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080516.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080516.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080516.7910762, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_105.xlsx", "action": "modified", "src": "10.0.10.55", "user": "user40"}
+{"ts": 1779080516.9198017, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_103.xlsx", "action": "modified", "src": "10.0.10.14", "user": "user05"}
+{"ts": 1779080517.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080517.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080518.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080518.6985087, "type": "auth", "result": "failure", "user": "user25", "src": "10.0.10.22", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080518.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080519.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080519.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080520.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080520.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080521.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080521.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080522.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080522.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080523.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080523.3033414, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_90.xlsx", "action": "modified", "src": "10.0.10.53", "user": "user14"}
+{"ts": 1779080523.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080524.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080524.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080525.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080525.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080526.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080526.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080527.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080527.3492901, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_138.xlsx", "action": "modified", "src": "10.0.10.24", "user": "user11"}
+{"ts": 1779080527.6620314, "type": "auth", "result": "failure", "user": "user05", "src": "10.0.10.48", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080527.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080528.1123173, "type": "auth", "result": "success", "user": "user43", "src": "10.0.10.54", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080528.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080528.5270472, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_291.xlsx", "action": "modified", "src": "10.0.10.13", "user": "user10"}
+{"ts": 1779080528.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080529.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080529.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080530.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080530.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080530.988785, "type": "auth", "result": "success", "user": "user41", "src": "10.0.10.52", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080531.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080531.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080532.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080532.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080533.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080533.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080534.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080534.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080534.903942, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_1.xlsx", "action": "modified", "src": "10.0.10.21", "user": "user18"}
+{"ts": 1779080535.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080535.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080536.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080536.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080536.7394807, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_67.xlsx", "action": "modified", "src": "10.0.10.27", "user": "user33"}
+{"ts": 1779080537.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080537.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080538.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080538.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080539.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080539.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080540.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080540.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080541.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080541.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080542.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080542.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080543.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080543.3813283, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_245.xlsx", "action": "modified", "src": "10.0.10.25", "user": "user43"}
+{"ts": 1779080543.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080544.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080544.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080545.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080545.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080546.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080546.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080547.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080547.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080548.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080548.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080549.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080549.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080550.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080550.416786, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_290.xlsx", "action": "modified", "src": "10.0.10.54", "user": "user46"}
+{"ts": 1779080550.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080551.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080551.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080552.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080552.3060825, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_92.xlsx", "action": "modified", "src": "10.0.10.31", "user": "user25"}
+{"ts": 1779080552.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080553.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080553.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080553.9583979, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_52.xlsx", "action": "modified", "src": "10.0.10.31", "user": "user15"}
+{"ts": 1779080554.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080554.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080555.109872, "type": "auth", "result": "failure", "user": "user35", "src": "10.0.10.39", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080555.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080555.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080556.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080556.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080557.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080557.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080558.2, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080558.7, "type": "auth", "result": "failure", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4625}
+{"ts": 1779080560.0, "type": "auth", "result": "success", "user": "administrator", "src": "185.220.101.47", "host": "10.0.1.30", "proto": "rdp", "event_id": 4624}
+{"ts": 1779080560.2917764, "type": "auth", "result": "success", "user": "user05", "src": "10.0.10.16", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080560.6008186, "type": "auth", "result": "success", "user": "user04", "src": "10.0.10.15", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080561.0326896, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_165.xlsx", "action": "modified", "src": "10.0.10.37", "user": "user23"}
+{"ts": 1779080563.9046347, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_83.xlsx", "action": "modified", "src": "10.0.10.27", "user": "user03"}
+{"ts": 1779080568.3979676, "type": "auth", "result": "failure", "user": "user49", "src": "10.0.10.25", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080570.3635373, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_211.xlsx", "action": "modified", "src": "10.0.10.42", "user": "user46"}
+{"ts": 1779080574.8495104, "type": "auth", "result": "failure", "user": "user26", "src": "10.0.10.43", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080575.78724, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_169.xlsx", "action": "modified", "src": "10.0.10.57", "user": "user48"}
+{"ts": 1779080577.90097, "type": "auth", "result": "success", "user": "user08", "src": "10.0.10.19", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080581.7246633, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_106.xlsx", "action": "modified", "src": "10.0.10.53", "user": "user34"}
+{"ts": 1779080581.9932148, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_6.xlsx", "action": "modified", "src": "10.0.10.22", "user": "user25"}
+{"ts": 1779080584.396185, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_45.xlsx", "action": "modified", "src": "10.0.10.28", "user": "user42"}
+{"ts": 1779080584.961269, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_98.xlsx", "action": "modified", "src": "10.0.10.55", "user": "user09"}
+{"ts": 1779080585.5610228, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_116.xlsx", "action": "modified", "src": "10.0.10.24", "user": "user27"}
+{"ts": 1779080589.6561723, "type": "auth", "result": "success", "user": "user29", "src": "10.0.10.40", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080590.5609365, "type": "auth", "result": "failure", "user": "user44", "src": "10.0.10.26", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080593.941516, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_280.xlsx", "action": "modified", "src": "10.0.10.16", "user": "user31"}
+{"ts": 1779080596.0715601, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_141.xlsx", "action": "modified", "src": "10.0.10.47", "user": "user01"}
+{"ts": 1779080597.7975032, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_7.xlsx", "action": "modified", "src": "10.0.10.44", "user": "user22"}
+{"ts": 1779080598.0473413, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_117.xlsx", "action": "modified", "src": "10.0.10.19", "user": "user42"}
+{"ts": 1779080598.3945115, "type": "auth", "result": "failure", "user": "user23", "src": "10.0.10.14", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080600.8444428, "type": "auth", "result": "success", "user": "user34", "src": "10.0.10.45", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080604.8857036, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_294.xlsx", "action": "modified", "src": "10.0.10.31", "user": "user47"}
+{"ts": 1779080606.5537941, "type": "auth", "result": "success", "user": "user38", "src": "10.0.10.49", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080607.398209, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_267.xlsx", "action": "modified", "src": "10.0.10.30", "user": "user19"}
+{"ts": 1779080613.937863, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_193.xlsx", "action": "modified", "src": "10.0.10.55", "user": "user24"}
+{"ts": 1779080616.8128452, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_205.xlsx", "action": "modified", "src": "10.0.10.31", "user": "user14"}
+{"ts": 1779080618.3785992, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_84.xlsx", "action": "modified", "src": "10.0.10.32", "user": "user47"}
+{"ts": 1779080621.2980702, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_210.xlsx", "action": "modified", "src": "10.0.10.42", "user": "user29"}
+{"ts": 1779080625.5475218, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_36.xlsx", "action": "modified", "src": "10.0.10.42", "user": "user18"}
+{"ts": 1779080631.6740708, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_21.xlsx", "action": "modified", "src": "10.0.10.36", "user": "user12"}
+{"ts": 1779080646.974068, "type": "auth", "result": "failure", "user": "user07", "src": "10.0.10.46", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080648.873823, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_38.xlsx", "action": "modified", "src": "10.0.10.45", "user": "user32"}
+{"ts": 1779080655.0163457, "type": "auth", "result": "failure", "user": "user44", "src": "10.0.10.18", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080658.548924, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_122.xlsx", "action": "modified", "src": "10.0.10.20", "user": "user15"}
+{"ts": 1779080660.0512145, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_267.xlsx", "action": "modified", "src": "10.0.10.24", "user": "user29"}
+{"ts": 1779080660.2977486, "type": "auth", "result": "failure", "user": "user42", "src": "10.0.10.45", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080663.3188581, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_86.xlsx", "action": "modified", "src": "10.0.10.41", "user": "user37"}
+{"ts": 1779080664.1629806, "type": "auth", "result": "failure", "user": "user14", "src": "10.0.10.35", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080666.2400608, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_80.xlsx", "action": "modified", "src": "10.0.10.31", "user": "user17"}
+{"ts": 1779080666.3772268, "type": "auth", "result": "failure", "user": "user17", "src": "10.0.10.51", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080667.6197677, "type": "auth", "result": "failure", "user": "user12", "src": "10.0.10.14", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080668.9483926, "type": "auth", "result": "failure", "user": "user34", "src": "10.0.10.30", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080672.8866482, "type": "auth", "result": "failure", "user": "user01", "src": "10.0.10.28", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080673.36944, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_285.xlsx", "action": "modified", "src": "10.0.10.33", "user": "user22"}
+{"ts": 1779080683.523448, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_75.xlsx", "action": "modified", "src": "10.0.10.25", "user": "user46"}
+{"ts": 1779080684.673746, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_239.xlsx", "action": "modified", "src": "10.0.10.11", "user": "user29"}
+{"ts": 1779080685.5341423, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_246.xlsx", "action": "modified", "src": "10.0.10.58", "user": "user34"}
+{"ts": 1779080687.1955779, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_235.xlsx", "action": "modified", "src": "10.0.10.46", "user": "user33"}
+{"ts": 1779080701.6182747, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_203.xlsx", "action": "modified", "src": "10.0.10.28", "user": "user41"}
+{"ts": 1779080702.0322976, "type": "auth", "result": "failure", "user": "user25", "src": "10.0.10.15", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080705.3386378, "type": "auth", "result": "failure", "user": "user22", "src": "10.0.10.41", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080707.1206362, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_63.xlsx", "action": "modified", "src": "10.0.10.45", "user": "user25"}
+{"ts": 1779080708.7095628, "type": "auth", "result": "failure", "user": "user18", "src": "10.0.10.51", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080712.5679564, "type": "auth", "result": "success", "user": "user12", "src": "10.0.10.23", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080712.782441, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_185.xlsx", "action": "modified", "src": "10.0.10.29", "user": "user26"}
+{"ts": 1779080715.20403, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_252.xlsx", "action": "modified", "src": "10.0.10.57", "user": "user02"}
+{"ts": 1779080722.1527286, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_164.xlsx", "action": "modified", "src": "10.0.10.52", "user": "user07"}
+{"ts": 1779080722.8275616, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_187.xlsx", "action": "modified", "src": "10.0.10.55", "user": "user03"}
+{"ts": 1779080723.8820338, "type": "auth", "result": "failure", "user": "user00", "src": "10.0.10.24", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080725.4281673, "type": "auth", "result": "failure", "user": "user18", "src": "10.0.10.30", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080732.2432568, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_113.xlsx", "action": "modified", "src": "10.0.10.58", "user": "user35"}
+{"ts": 1779080733.286024, "type": "auth", "result": "success", "user": "user44", "src": "10.0.10.55", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080733.2860246, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_142.xlsx", "action": "modified", "src": "10.0.10.16", "user": "user00"}
+{"ts": 1779080735.3126006, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_202.xlsx", "action": "modified", "src": "10.0.10.22", "user": "user24"}
+{"ts": 1779080736.1391954, "type": "auth", "result": "success", "user": "user38", "src": "10.0.10.49", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080736.9806128, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_200.xlsx", "action": "modified", "src": "10.0.10.54", "user": "user41"}
+{"ts": 1779080740.8576696, "type": "auth", "result": "success", "user": "user43", "src": "10.0.10.54", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080743.8424838, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_9.xlsx", "action": "modified", "src": "10.0.10.26", "user": "user02"}
+{"ts": 1779080745.0103483, "type": "auth", "result": "failure", "user": "user01", "src": "10.0.10.23", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080747.4252725, "type": "auth", "result": "success", "user": "user11", "src": "10.0.10.22", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080753.9528303, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_19.xlsx", "action": "modified", "src": "10.0.10.56", "user": "user07"}
+{"ts": 1779080755.3634574, "type": "auth", "result": "failure", "user": "user22", "src": "10.0.10.48", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080757.401806, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_227.xlsx", "action": "modified", "src": "10.0.10.29", "user": "user32"}
+{"ts": 1779080758.2298777, "type": "auth", "result": "failure", "user": "user23", "src": "10.0.10.45", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080759.4967864, "type": "auth", "result": "failure", "user": "user34", "src": "10.0.10.44", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080759.6545806, "type": "auth", "result": "failure", "user": "user35", "src": "10.0.10.43", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080764.376115, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_200.xlsx", "action": "modified", "src": "10.0.10.32", "user": "user21"}
+{"ts": 1779080766.36343, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_146.xlsx", "action": "modified", "src": "10.0.10.12", "user": "user46"}
+{"ts": 1779080767.4038095, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_37.xlsx", "action": "modified", "src": "10.0.10.35", "user": "user02"}
+{"ts": 1779080770.28423, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_53.xlsx", "action": "modified", "src": "10.0.10.43", "user": "user07"}
+{"ts": 1779080770.3908255, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_5.xlsx", "action": "modified", "src": "10.0.10.25", "user": "user49"}
+{"ts": 1779080771.9597585, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_294.xlsx", "action": "modified", "src": "10.0.10.29", "user": "user18"}
+{"ts": 1779080774.6983266, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_57.xlsx", "action": "modified", "src": "10.0.10.39", "user": "user11"}
+{"ts": 1779080776.0321999, "type": "auth", "result": "success", "user": "user38", "src": "10.0.10.49", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080776.7692988, "type": "auth", "result": "failure", "user": "user17", "src": "10.0.10.50", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080776.9262252, "type": "auth", "result": "failure", "user": "user48", "src": "10.0.10.16", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080777.102232, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_139.xlsx", "action": "modified", "src": "10.0.10.55", "user": "user45"}
+{"ts": 1779080780.8503876, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_238.xlsx", "action": "modified", "src": "10.0.10.18", "user": "user34"}
+{"ts": 1779080781.14382, "type": "auth", "result": "success", "user": "user23", "src": "10.0.10.34", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080781.2259498, "type": "auth", "result": "failure", "user": "user04", "src": "10.0.10.27", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080782.6150362, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_194.xlsx", "action": "modified", "src": "10.0.10.19", "user": "user39"}
+{"ts": 1779080784.4138052, "type": "auth", "result": "success", "user": "user38", "src": "10.0.10.49", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080785.8413813, "type": "auth", "result": "success", "user": "user14", "src": "10.0.10.25", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080789.511229, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_126.xlsx", "action": "modified", "src": "10.0.10.23", "user": "user49"}
+{"ts": 1779080794.541326, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_2.xlsx", "action": "modified", "src": "10.0.10.13", "user": "user19"}
+{"ts": 1779080797.0448246, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_252.xlsx", "action": "modified", "src": "10.0.10.59", "user": "user39"}
+{"ts": 1779080797.7591012, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_91.xlsx", "action": "modified", "src": "10.0.10.16", "user": "user21"}
+{"ts": 1779080800.076243, "type": "auth", "result": "failure", "user": "user06", "src": "10.0.10.13", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080802.0135412, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_298.xlsx", "action": "modified", "src": "10.0.10.29", "user": "user28"}
+{"ts": 1779080802.7120693, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_228.xlsx", "action": "modified", "src": "10.0.10.40", "user": "user40"}
+{"ts": 1779080802.735715, "type": "auth", "result": "failure", "user": "user24", "src": "10.0.10.53", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080802.7623727, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_232.xlsx", "action": "modified", "src": "10.0.10.12", "user": "user00"}
+{"ts": 1779080802.966412, "type": "auth", "result": "failure", "user": "user28", "src": "10.0.10.27", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080803.1487026, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_41.xlsx", "action": "modified", "src": "10.0.10.36", "user": "user03"}
+{"ts": 1779080805.1555676, "type": "auth", "result": "success", "user": "user06", "src": "10.0.10.17", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080805.9963713, "type": "auth", "result": "failure", "user": "user22", "src": "10.0.10.22", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080806.0880947, "type": "auth", "result": "success", "user": "user10", "src": "10.0.10.21", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080806.7828112, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_135.xlsx", "action": "modified", "src": "10.0.10.50", "user": "user39"}
+{"ts": 1779080809.6300216, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_181.xlsx", "action": "modified", "src": "10.0.10.20", "user": "user23"}
+{"ts": 1779080815.625539, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_204.xlsx", "action": "modified", "src": "10.0.10.51", "user": "user35"}
+{"ts": 1779080820.9146888, "type": "auth", "result": "failure", "user": "user18", "src": "10.0.10.16", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080823.9299848, "type": "auth", "result": "success", "user": "user47", "src": "10.0.10.58", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080823.983877, "type": "auth", "result": "failure", "user": "user34", "src": "10.0.10.23", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080824.279709, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_59.xlsx", "action": "modified", "src": "10.0.10.37", "user": "user32"}
+{"ts": 1779080835.7346096, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_285.xlsx", "action": "modified", "src": "10.0.10.36", "user": "user12"}
+{"ts": 1779080835.8283415, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_73.xlsx", "action": "modified", "src": "10.0.10.24", "user": "user15"}
+{"ts": 1779080835.9144711, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_224.xlsx", "action": "modified", "src": "10.0.10.13", "user": "user34"}
+{"ts": 1779080836.9955814, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_14.xlsx", "action": "modified", "src": "10.0.10.17", "user": "user19"}
+{"ts": 1779080837.419174, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_97.xlsx", "action": "modified", "src": "10.0.10.55", "user": "user36"}
+{"ts": 1779080840.3676074, "type": "auth", "result": "failure", "user": "user46", "src": "10.0.10.24", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080841.3730867, "type": "auth", "result": "failure", "user": "user35", "src": "10.0.10.52", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080842.3383074, "type": "auth", "result": "failure", "user": "user13", "src": "10.0.10.59", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080842.345955, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_204.xlsx", "action": "modified", "src": "10.0.10.30", "user": "user48"}
+{"ts": 1779080842.4896061, "type": "auth", "result": "failure", "user": "user45", "src": "10.0.10.37", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080842.5115464, "type": "auth", "result": "failure", "user": "user46", "src": "10.0.10.17", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080843.4209445, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_161.xlsx", "action": "modified", "src": "10.0.10.17", "user": "user24"}
+{"ts": 1779080844.0302906, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_180.xlsx", "action": "modified", "src": "10.0.10.55", "user": "user28"}
+{"ts": 1779080849.5813842, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_87.xlsx", "action": "modified", "src": "10.0.10.35", "user": "user49"}
+{"ts": 1779080859.2856257, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_149.xlsx", "action": "modified", "src": "10.0.10.34", "user": "user41"}
+{"ts": 1779080861.1480281, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_134.xlsx", "action": "modified", "src": "10.0.10.21", "user": "user41"}
+{"ts": 1779080862.9015186, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_119.xlsx", "action": "modified", "src": "10.0.10.26", "user": "user42"}
+{"ts": 1779080865.463532, "type": "auth", "result": "failure", "user": "user29", "src": "10.0.10.39", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080867.7052057, "type": "auth", "result": "failure", "user": "user48", "src": "10.0.10.54", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080868.2584183, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_170.xlsx", "action": "modified", "src": "10.0.10.57", "user": "user17"}
+{"ts": 1779080868.6919186, "type": "auth", "result": "success", "user": "user34", "src": "10.0.10.45", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080868.736507, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_94.xlsx", "action": "modified", "src": "10.0.10.46", "user": "user26"}
+{"ts": 1779080869.2075963, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_100.xlsx", "action": "modified", "src": "10.0.10.13", "user": "user29"}
+{"ts": 1779080871.5768263, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_269.xlsx", "action": "modified", "src": "10.0.10.39", "user": "user35"}
+{"ts": 1779080871.8558104, "type": "auth", "result": "failure", "user": "user22", "src": "10.0.10.20", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080873.7627923, "type": "auth", "result": "success", "user": "user22", "src": "10.0.10.33", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080874.8094716, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_40.xlsx", "action": "modified", "src": "10.0.10.28", "user": "user32"}
+{"ts": 1779080874.8618672, "type": "auth", "result": "failure", "user": "user45", "src": "10.0.10.44", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080877.3819797, "type": "auth", "result": "failure", "user": "user34", "src": "10.0.10.52", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080879.165804, "type": "auth", "result": "failure", "user": "user23", "src": "10.0.10.35", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080879.5554702, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_15.xlsx", "action": "modified", "src": "10.0.10.22", "user": "user20"}
+{"ts": 1779080880.4849439, "type": "auth", "result": "success", "user": "user25", "src": "10.0.10.36", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080880.653042, "type": "auth", "result": "failure", "user": "user15", "src": "10.0.10.28", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080880.653042, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_222.xlsx", "action": "modified", "src": "10.0.10.28", "user": "user27"}
+{"ts": 1779080885.7698376, "type": "auth", "result": "success", "user": "user36", "src": "10.0.10.47", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080888.2794752, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_300.xlsx", "action": "modified", "src": "10.0.10.41", "user": "user17"}
+{"ts": 1779080889.7230291, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_197.xlsx", "action": "modified", "src": "10.0.10.48", "user": "user33"}
+{"ts": 1779080893.3243756, "type": "auth", "result": "failure", "user": "user31", "src": "10.0.10.36", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080893.753291, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_197.xlsx", "action": "modified", "src": "10.0.10.25", "user": "user08"}
+{"ts": 1779080894.6869063, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_261.xlsx", "action": "modified", "src": "10.0.10.11", "user": "user16"}
+{"ts": 1779080896.3467505, "type": "auth", "result": "failure", "user": "user18", "src": "10.0.10.12", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080896.4445574, "type": "auth", "result": "failure", "user": "user14", "src": "10.0.10.45", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080896.7971618, "type": "auth", "result": "failure", "user": "user46", "src": "10.0.10.29", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080904.1759782, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_108.xlsx", "action": "modified", "src": "10.0.10.11", "user": "user03"}
+{"ts": 1779080907.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_0.docx.locked"}
+{"ts": 1779080907.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_1.docx.locked"}
+{"ts": 1779080907.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_2.docx.locked"}
+{"ts": 1779080907.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_3.docx.locked"}
+{"ts": 1779080907.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_4.docx.locked"}
+{"ts": 1779080907.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_5.docx.locked"}
+{"ts": 1779080907.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_6.docx.locked"}
+{"ts": 1779080907.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_7.docx.locked"}
+{"ts": 1779080907.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_8.docx.locked"}
+{"ts": 1779080908.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_9.docx.locked"}
+{"ts": 1779080908.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_10.docx.locked"}
+{"ts": 1779080908.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_11.docx.locked"}
+{"ts": 1779080908.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_12.docx.locked"}
+{"ts": 1779080908.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_13.docx.locked"}
+{"ts": 1779080908.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_14.docx.locked"}
+{"ts": 1779080908.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_15.docx.locked"}
+{"ts": 1779080908.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_16.docx.locked"}
+{"ts": 1779080909.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_17.docx.locked"}
+{"ts": 1779080909.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_18.docx.locked"}
+{"ts": 1779080909.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_19.docx.locked"}
+{"ts": 1779080909.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_20.docx.locked"}
+{"ts": 1779080909.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_21.docx.locked"}
+{"ts": 1779080909.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_22.docx.locked"}
+{"ts": 1779080909.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_23.docx.locked"}
+{"ts": 1779080909.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_24.docx.locked"}
+{"ts": 1779080910.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_25.docx.locked"}
+{"ts": 1779080910.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_26.docx.locked"}
+{"ts": 1779080910.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_27.docx.locked"}
+{"ts": 1779080910.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_28.docx.locked"}
+{"ts": 1779080910.3862727, "type": "auth", "result": "success", "user": "user16", "src": "10.0.10.27", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080910.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_29.docx.locked"}
+{"ts": 1779080910.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_30.docx.locked"}
+{"ts": 1779080910.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_31.docx.locked"}
+{"ts": 1779080910.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_32.docx.locked"}
+{"ts": 1779080910.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_33.docx.locked"}
+{"ts": 1779080911.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_34.docx.locked"}
+{"ts": 1779080911.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_35.docx.locked"}
+{"ts": 1779080911.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_36.docx.locked"}
+{"ts": 1779080911.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_37.docx.locked"}
+{"ts": 1779080911.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_38.docx.locked"}
+{"ts": 1779080911.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_39.docx.locked"}
+{"ts": 1779080911.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_40.docx.locked"}
+{"ts": 1779080911.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_41.docx.locked"}
+{"ts": 1779080912.0172422, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_68.xlsx", "action": "modified", "src": "10.0.10.17", "user": "user04"}
+{"ts": 1779080912.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_42.docx.locked"}
+{"ts": 1779080912.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_43.docx.locked"}
+{"ts": 1779080912.180805, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_118.xlsx", "action": "modified", "src": "10.0.10.15", "user": "user30"}
+{"ts": 1779080912.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_44.docx.locked"}
+{"ts": 1779080912.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_45.docx.locked"}
+{"ts": 1779080912.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_46.docx.locked"}
+{"ts": 1779080912.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_47.docx.locked"}
+{"ts": 1779080912.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_48.docx.locked"}
+{"ts": 1779080912.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_49.docx.locked"}
+{"ts": 1779080912.9788682, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_187.xlsx", "action": "modified", "src": "10.0.10.21", "user": "user46"}
+{"ts": 1779080913.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_50.docx.locked"}
+{"ts": 1779080913.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_51.docx.locked"}
+{"ts": 1779080913.1931498, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_25.xlsx", "action": "modified", "src": "10.0.10.20", "user": "user22"}
+{"ts": 1779080913.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_52.docx.locked"}
+{"ts": 1779080913.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_53.docx.locked"}
+{"ts": 1779080913.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_54.docx.locked"}
+{"ts": 1779080913.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_55.docx.locked"}
+{"ts": 1779080913.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_56.docx.locked"}
+{"ts": 1779080913.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_57.docx.locked"}
+{"ts": 1779080913.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_58.docx.locked"}
+{"ts": 1779080914.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_59.docx.locked"}
+{"ts": 1779080914.1736786, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_34.xlsx", "action": "modified", "src": "10.0.10.18", "user": "user05"}
+{"ts": 1779080914.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_60.docx.locked"}
+{"ts": 1779080914.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_61.docx.locked"}
+{"ts": 1779080914.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_62.docx.locked"}
+{"ts": 1779080914.456603, "type": "auth", "result": "failure", "user": "user14", "src": "10.0.10.43", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080914.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_63.docx.locked"}
+{"ts": 1779080914.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_64.docx.locked"}
+{"ts": 1779080914.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_65.docx.locked"}
+{"ts": 1779080914.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_66.docx.locked"}
+{"ts": 1779080915.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_67.docx.locked"}
+{"ts": 1779080915.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_68.docx.locked"}
+{"ts": 1779080915.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_69.docx.locked"}
+{"ts": 1779080915.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_70.docx.locked"}
+{"ts": 1779080915.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_71.docx.locked"}
+{"ts": 1779080915.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_72.docx.locked"}
+{"ts": 1779080915.695522, "type": "auth", "result": "failure", "user": "user45", "src": "10.0.10.13", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080915.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_73.docx.locked"}
+{"ts": 1779080915.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_74.docx.locked"}
+{"ts": 1779080915.9582918, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_17.xlsx", "action": "modified", "src": "10.0.10.32", "user": "user11"}
+{"ts": 1779080916.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_75.docx.locked"}
+{"ts": 1779080916.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_76.docx.locked"}
+{"ts": 1779080916.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_77.docx.locked"}
+{"ts": 1779080916.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_78.docx.locked"}
+{"ts": 1779080916.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_79.docx.locked"}
+{"ts": 1779080916.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_80.docx.locked"}
+{"ts": 1779080916.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_81.docx.locked"}
+{"ts": 1779080916.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_82.docx.locked"}
+{"ts": 1779080916.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_83.docx.locked"}
+{"ts": 1779080917.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_84.docx.locked"}
+{"ts": 1779080917.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_85.docx.locked"}
+{"ts": 1779080917.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_86.docx.locked"}
+{"ts": 1779080917.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_87.docx.locked"}
+{"ts": 1779080917.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_88.docx.locked"}
+{"ts": 1779080917.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_89.docx.locked"}
+{"ts": 1779080917.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_90.docx.locked"}
+{"ts": 1779080917.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_91.docx.locked"}
+{"ts": 1779080918.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_92.docx.locked"}
+{"ts": 1779080918.0635383, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_62.xlsx", "action": "modified", "src": "10.0.10.15", "user": "user15"}
+{"ts": 1779080918.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_93.docx.locked"}
+{"ts": 1779080918.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_94.docx.locked"}
+{"ts": 1779080918.3661745, "type": "auth", "result": "failure", "user": "user07", "src": "10.0.10.35", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080918.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_95.docx.locked"}
+{"ts": 1779080918.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_96.docx.locked"}
+{"ts": 1779080918.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_97.docx.locked"}
+{"ts": 1779080918.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_98.docx.locked"}
+{"ts": 1779080918.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_99.docx.locked"}
+{"ts": 1779080919.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_100.docx.locked"}
+{"ts": 1779080919.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_101.docx.locked"}
+{"ts": 1779080919.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_102.docx.locked"}
+{"ts": 1779080919.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_103.docx.locked"}
+{"ts": 1779080919.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_104.docx.locked"}
+{"ts": 1779080919.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_105.docx.locked"}
+{"ts": 1779080919.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_106.docx.locked"}
+{"ts": 1779080919.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_107.docx.locked"}
+{"ts": 1779080919.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_108.docx.locked"}
+{"ts": 1779080920.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_109.docx.locked"}
+{"ts": 1779080920.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_110.docx.locked"}
+{"ts": 1779080920.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_111.docx.locked"}
+{"ts": 1779080920.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_112.docx.locked"}
+{"ts": 1779080920.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_113.docx.locked"}
+{"ts": 1779080920.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_114.docx.locked"}
+{"ts": 1779080920.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_115.docx.locked"}
+{"ts": 1779080920.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_116.docx.locked"}
+{"ts": 1779080921.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_117.docx.locked"}
+{"ts": 1779080921.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_118.docx.locked"}
+{"ts": 1779080921.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_119.docx.locked"}
+{"ts": 1779080921.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_120.docx.locked"}
+{"ts": 1779080921.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_121.docx.locked"}
+{"ts": 1779080921.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_122.docx.locked"}
+{"ts": 1779080921.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_123.docx.locked"}
+{"ts": 1779080921.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_124.docx.locked"}
+{"ts": 1779080922.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_125.docx.locked"}
+{"ts": 1779080922.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_126.docx.locked"}
+{"ts": 1779080922.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_127.docx.locked"}
+{"ts": 1779080922.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_128.docx.locked"}
+{"ts": 1779080922.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_129.docx.locked"}
+{"ts": 1779080922.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_130.docx.locked"}
+{"ts": 1779080922.6139064, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_199.xlsx", "action": "modified", "src": "10.0.10.25", "user": "user02"}
+{"ts": 1779080922.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_131.docx.locked"}
+{"ts": 1779080922.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_132.docx.locked"}
+{"ts": 1779080922.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_133.docx.locked"}
+{"ts": 1779080923.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_134.docx.locked"}
+{"ts": 1779080923.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_135.docx.locked"}
+{"ts": 1779080923.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_136.docx.locked"}
+{"ts": 1779080923.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_137.docx.locked"}
+{"ts": 1779080923.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_138.docx.locked"}
+{"ts": 1779080923.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_139.docx.locked"}
+{"ts": 1779080923.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_140.docx.locked"}
+{"ts": 1779080923.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_141.docx.locked"}
+{"ts": 1779080924.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_142.docx.locked"}
+{"ts": 1779080924.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_143.docx.locked"}
+{"ts": 1779080924.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_144.docx.locked"}
+{"ts": 1779080924.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_145.docx.locked"}
+{"ts": 1779080924.4819882, "type": "auth", "result": "failure", "user": "user23", "src": "10.0.10.44", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080924.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_146.docx.locked"}
+{"ts": 1779080924.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_147.docx.locked"}
+{"ts": 1779080924.7135046, "type": "auth", "result": "success", "user": "user30", "src": "10.0.10.41", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080924.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_148.docx.locked"}
+{"ts": 1779080924.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_149.docx.locked"}
+{"ts": 1779080925.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_150.docx.locked"}
+{"ts": 1779080925.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_151.docx.locked"}
+{"ts": 1779080925.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_152.docx.locked"}
+{"ts": 1779080925.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_153.docx.locked"}
+{"ts": 1779080925.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_154.docx.locked"}
+{"ts": 1779080925.5541878, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_224.xlsx", "action": "modified", "src": "10.0.10.21", "user": "user43"}
+{"ts": 1779080925.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_155.docx.locked"}
+{"ts": 1779080925.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_156.docx.locked"}
+{"ts": 1779080925.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_157.docx.locked"}
+{"ts": 1779080925.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_158.docx.locked"}
+{"ts": 1779080926.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_159.docx.locked"}
+{"ts": 1779080926.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_160.docx.locked"}
+{"ts": 1779080926.2291336, "type": "auth", "result": "failure", "user": "user11", "src": "10.0.10.14", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080926.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_161.docx.locked"}
+{"ts": 1779080926.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_162.docx.locked"}
+{"ts": 1779080926.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_163.docx.locked"}
+{"ts": 1779080926.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_164.docx.locked"}
+{"ts": 1779080926.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_165.docx.locked"}
+{"ts": 1779080926.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_166.docx.locked"}
+{"ts": 1779080927.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_167.docx.locked"}
+{"ts": 1779080927.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_168.docx.locked"}
+{"ts": 1779080927.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_169.docx.locked"}
+{"ts": 1779080927.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_170.docx.locked"}
+{"ts": 1779080927.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_171.docx.locked"}
+{"ts": 1779080927.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_172.docx.locked"}
+{"ts": 1779080927.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_173.docx.locked"}
+{"ts": 1779080927.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_174.docx.locked"}
+{"ts": 1779080928.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_175.docx.locked"}
+{"ts": 1779080928.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_176.docx.locked"}
+{"ts": 1779080928.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_177.docx.locked"}
+{"ts": 1779080928.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_178.docx.locked"}
+{"ts": 1779080928.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_179.docx.locked"}
+{"ts": 1779080928.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_180.docx.locked"}
+{"ts": 1779080928.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_181.docx.locked"}
+{"ts": 1779080928.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_182.docx.locked"}
+{"ts": 1779080928.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_183.docx.locked"}
+{"ts": 1779080929.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_184.docx.locked"}
+{"ts": 1779080929.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_185.docx.locked"}
+{"ts": 1779080929.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_186.docx.locked"}
+{"ts": 1779080929.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_187.docx.locked"}
+{"ts": 1779080929.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_188.docx.locked"}
+{"ts": 1779080929.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_189.docx.locked"}
+{"ts": 1779080929.6836398, "type": "auth", "result": "success", "user": "user04", "src": "10.0.10.15", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080929.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_190.docx.locked"}
+{"ts": 1779080929.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_191.docx.locked"}
+{"ts": 1779080930.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_192.docx.locked"}
+{"ts": 1779080930.0980701, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_37.xlsx", "action": "modified", "src": "10.0.10.54", "user": "user39"}
+{"ts": 1779080930.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_193.docx.locked"}
+{"ts": 1779080930.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_194.docx.locked"}
+{"ts": 1779080930.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_195.docx.locked"}
+{"ts": 1779080930.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_196.docx.locked"}
+{"ts": 1779080930.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_197.docx.locked"}
+{"ts": 1779080930.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_198.docx.locked"}
+{"ts": 1779080930.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_199.docx.locked"}
+{"ts": 1779080931.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_200.docx.locked"}
+{"ts": 1779080931.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_201.docx.locked"}
+{"ts": 1779080931.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_202.docx.locked"}
+{"ts": 1779080931.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_203.docx.locked"}
+{"ts": 1779080931.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_204.docx.locked"}
+{"ts": 1779080931.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_205.docx.locked"}
+{"ts": 1779080931.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_206.docx.locked"}
+{"ts": 1779080931.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_207.docx.locked"}
+{"ts": 1779080931.8657553, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_255.xlsx", "action": "modified", "src": "10.0.10.44", "user": "user22"}
+{"ts": 1779080931.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_208.docx.locked"}
+{"ts": 1779080932.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_209.docx.locked"}
+{"ts": 1779080932.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_210.docx.locked"}
+{"ts": 1779080932.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_211.docx.locked"}
+{"ts": 1779080932.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_212.docx.locked"}
+{"ts": 1779080932.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_213.docx.locked"}
+{"ts": 1779080932.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_214.docx.locked"}
+{"ts": 1779080932.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_215.docx.locked"}
+{"ts": 1779080932.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_216.docx.locked"}
+{"ts": 1779080933.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_217.docx.locked"}
+{"ts": 1779080933.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_218.docx.locked"}
+{"ts": 1779080933.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_219.docx.locked"}
+{"ts": 1779080933.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_220.docx.locked"}
+{"ts": 1779080933.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_221.docx.locked"}
+{"ts": 1779080933.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_222.docx.locked"}
+{"ts": 1779080933.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_223.docx.locked"}
+{"ts": 1779080933.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_224.docx.locked"}
+{"ts": 1779080934.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_225.docx.locked"}
+{"ts": 1779080934.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_226.docx.locked"}
+{"ts": 1779080934.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_227.docx.locked"}
+{"ts": 1779080934.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_228.docx.locked"}
+{"ts": 1779080934.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_229.docx.locked"}
+{"ts": 1779080934.4939878, "type": "auth", "result": "success", "user": "user24", "src": "10.0.10.35", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080934.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_230.docx.locked"}
+{"ts": 1779080934.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_231.docx.locked"}
+{"ts": 1779080934.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_232.docx.locked"}
+{"ts": 1779080934.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_233.docx.locked"}
+{"ts": 1779080935.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_234.docx.locked"}
+{"ts": 1779080935.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_235.docx.locked"}
+{"ts": 1779080935.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_236.docx.locked"}
+{"ts": 1779080935.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_237.docx.locked"}
+{"ts": 1779080935.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_238.docx.locked"}
+{"ts": 1779080935.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_239.docx.locked"}
+{"ts": 1779080935.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_240.docx.locked"}
+{"ts": 1779080935.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_241.docx.locked"}
+{"ts": 1779080936.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_242.docx.locked"}
+{"ts": 1779080936.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_243.docx.locked"}
+{"ts": 1779080936.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_244.docx.locked"}
+{"ts": 1779080936.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_245.docx.locked"}
+{"ts": 1779080936.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_246.docx.locked"}
+{"ts": 1779080936.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_247.docx.locked"}
+{"ts": 1779080936.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_248.docx.locked"}
+{"ts": 1779080936.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_249.docx.locked"}
+{"ts": 1779080937.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_250.docx.locked"}
+{"ts": 1779080937.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_251.docx.locked"}
+{"ts": 1779080937.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_252.docx.locked"}
+{"ts": 1779080937.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_253.docx.locked"}
+{"ts": 1779080937.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_254.docx.locked"}
+{"ts": 1779080937.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_255.docx.locked"}
+{"ts": 1779080937.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_256.docx.locked"}
+{"ts": 1779080937.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_257.docx.locked"}
+{"ts": 1779080937.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_258.docx.locked"}
+{"ts": 1779080938.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_259.docx.locked"}
+{"ts": 1779080938.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_260.docx.locked"}
+{"ts": 1779080938.2565718, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_131.xlsx", "action": "modified", "src": "10.0.10.50", "user": "user01"}
+{"ts": 1779080938.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_261.docx.locked"}
+{"ts": 1779080938.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_262.docx.locked"}
+{"ts": 1779080938.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_263.docx.locked"}
+{"ts": 1779080938.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_264.docx.locked"}
+{"ts": 1779080938.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_265.docx.locked"}
+{"ts": 1779080938.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_266.docx.locked"}
+{"ts": 1779080939.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_267.docx.locked"}
+{"ts": 1779080939.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_268.docx.locked"}
+{"ts": 1779080939.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_269.docx.locked"}
+{"ts": 1779080939.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_270.docx.locked"}
+{"ts": 1779080939.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_271.docx.locked"}
+{"ts": 1779080939.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_272.docx.locked"}
+{"ts": 1779080939.6629994, "type": "auth", "result": "failure", "user": "user18", "src": "10.0.10.14", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080939.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_273.docx.locked"}
+{"ts": 1779080939.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_274.docx.locked"}
+{"ts": 1779080940.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_275.docx.locked"}
+{"ts": 1779080940.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_276.docx.locked"}
+{"ts": 1779080940.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_277.docx.locked"}
+{"ts": 1779080940.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_278.docx.locked"}
+{"ts": 1779080940.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_279.docx.locked"}
+{"ts": 1779080940.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_280.docx.locked"}
+{"ts": 1779080940.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_281.docx.locked"}
+{"ts": 1779080940.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_282.docx.locked"}
+{"ts": 1779080940.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_283.docx.locked"}
+{"ts": 1779080941.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_284.docx.locked"}
+{"ts": 1779080941.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_285.docx.locked"}
+{"ts": 1779080941.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_286.docx.locked"}
+{"ts": 1779080941.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_287.docx.locked"}
+{"ts": 1779080941.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_288.docx.locked"}
+{"ts": 1779080941.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_289.docx.locked"}
+{"ts": 1779080941.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_290.docx.locked"}
+{"ts": 1779080941.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_291.docx.locked"}
+{"ts": 1779080942.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_292.docx.locked"}
+{"ts": 1779080942.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_293.docx.locked"}
+{"ts": 1779080942.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_294.docx.locked"}
+{"ts": 1779080942.365729, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_150.xlsx", "action": "modified", "src": "10.0.10.30", "user": "user01"}
+{"ts": 1779080942.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_295.docx.locked"}
+{"ts": 1779080942.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_296.docx.locked"}
+{"ts": 1779080942.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_297.docx.locked"}
+{"ts": 1779080942.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_298.docx.locked"}
+{"ts": 1779080942.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_299.docx.locked"}
+{"ts": 1779080943.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_300.docx.locked"}
+{"ts": 1779080943.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_301.docx.locked"}
+{"ts": 1779080943.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_302.docx.locked"}
+{"ts": 1779080943.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_303.docx.locked"}
+{"ts": 1779080943.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_304.docx.locked"}
+{"ts": 1779080943.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_305.docx.locked"}
+{"ts": 1779080943.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_306.docx.locked"}
+{"ts": 1779080943.8338535, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_96.xlsx", "action": "modified", "src": "10.0.10.48", "user": "user30"}
+{"ts": 1779080943.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_307.docx.locked"}
+{"ts": 1779080943.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_308.docx.locked"}
+{"ts": 1779080944.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_309.docx.locked"}
+{"ts": 1779080944.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_310.docx.locked"}
+{"ts": 1779080944.2500663, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_125.xlsx", "action": "modified", "src": "10.0.10.55", "user": "user41"}
+{"ts": 1779080944.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_311.docx.locked"}
+{"ts": 1779080944.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_312.docx.locked"}
+{"ts": 1779080944.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_313.docx.locked"}
+{"ts": 1779080944.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_314.docx.locked"}
+{"ts": 1779080944.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_315.docx.locked"}
+{"ts": 1779080944.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_316.docx.locked"}
+{"ts": 1779080945.0237446, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_73.xlsx", "action": "modified", "src": "10.0.10.53", "user": "user12"}
+{"ts": 1779080945.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_317.docx.locked"}
+{"ts": 1779080945.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_318.docx.locked"}
+{"ts": 1779080945.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_319.docx.locked"}
+{"ts": 1779080945.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_320.docx.locked"}
+{"ts": 1779080945.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_321.docx.locked"}
+{"ts": 1779080945.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_322.docx.locked"}
+{"ts": 1779080945.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_323.docx.locked"}
+{"ts": 1779080945.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_324.docx.locked"}
+{"ts": 1779080946.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_325.docx.locked"}
+{"ts": 1779080946.077783, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_295.xlsx", "action": "modified", "src": "10.0.10.45", "user": "user04"}
+{"ts": 1779080946.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_326.docx.locked"}
+{"ts": 1779080946.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_327.docx.locked"}
+{"ts": 1779080946.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_328.docx.locked"}
+{"ts": 1779080946.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_329.docx.locked"}
+{"ts": 1779080946.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_330.docx.locked"}
+{"ts": 1779080946.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_331.docx.locked"}
+{"ts": 1779080946.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_332.docx.locked"}
+{"ts": 1779080946.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_333.docx.locked"}
+{"ts": 1779080947.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_334.docx.locked"}
+{"ts": 1779080947.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_335.docx.locked"}
+{"ts": 1779080947.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_336.docx.locked"}
+{"ts": 1779080947.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_337.docx.locked"}
+{"ts": 1779080947.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_338.docx.locked"}
+{"ts": 1779080947.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_339.docx.locked"}
+{"ts": 1779080947.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_340.docx.locked"}
+{"ts": 1779080947.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_341.docx.locked"}
+{"ts": 1779080948.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_342.docx.locked"}
+{"ts": 1779080948.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_343.docx.locked"}
+{"ts": 1779080948.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_344.docx.locked"}
+{"ts": 1779080948.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_345.docx.locked"}
+{"ts": 1779080948.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_346.docx.locked"}
+{"ts": 1779080948.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_347.docx.locked"}
+{"ts": 1779080948.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_348.docx.locked"}
+{"ts": 1779080948.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_349.docx.locked"}
+{"ts": 1779080949.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_350.docx.locked"}
+{"ts": 1779080949.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_351.docx.locked"}
+{"ts": 1779080949.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_352.docx.locked"}
+{"ts": 1779080949.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_353.docx.locked"}
+{"ts": 1779080949.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_354.docx.locked"}
+{"ts": 1779080949.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_355.docx.locked"}
+{"ts": 1779080949.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_356.docx.locked"}
+{"ts": 1779080949.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_357.docx.locked"}
+{"ts": 1779080949.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_358.docx.locked"}
+{"ts": 1779080950.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_359.docx.locked"}
+{"ts": 1779080950.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_360.docx.locked"}
+{"ts": 1779080950.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_361.docx.locked"}
+{"ts": 1779080950.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_362.docx.locked"}
+{"ts": 1779080950.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_363.docx.locked"}
+{"ts": 1779080950.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_364.docx.locked"}
+{"ts": 1779080950.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_365.docx.locked"}
+{"ts": 1779080950.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_366.docx.locked"}
+{"ts": 1779080951.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_367.docx.locked"}
+{"ts": 1779080951.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_368.docx.locked"}
+{"ts": 1779080951.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_369.docx.locked"}
+{"ts": 1779080951.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_370.docx.locked"}
+{"ts": 1779080951.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_371.docx.locked"}
+{"ts": 1779080951.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_372.docx.locked"}
+{"ts": 1779080951.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_373.docx.locked"}
+{"ts": 1779080951.7725046, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_185.xlsx", "action": "modified", "src": "10.0.10.32", "user": "user17"}
+{"ts": 1779080951.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_374.docx.locked"}
+{"ts": 1779080952.0, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_375.docx.locked"}
+{"ts": 1779080952.12, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_376.docx.locked"}
+{"ts": 1779080952.24, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_377.docx.locked"}
+{"ts": 1779080952.36, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_378.docx.locked"}
+{"ts": 1779080952.48, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_379.docx.locked"}
+{"ts": 1779080952.6, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_380.docx.locked"}
+{"ts": 1779080952.72, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_381.docx.locked"}
+{"ts": 1779080952.84, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_382.docx.locked"}
+{"ts": 1779080952.96, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_383.docx.locked"}
+{"ts": 1779080953.08, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_384.docx.locked"}
+{"ts": 1779080953.2, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_385.docx.locked"}
+{"ts": 1779080953.32, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_386.docx.locked"}
+{"ts": 1779080953.44, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_387.docx.locked"}
+{"ts": 1779080953.56, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_388.docx.locked"}
+{"ts": 1779080953.68, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_389.docx.locked"}
+{"ts": 1779080953.7819388, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_133.xlsx", "action": "modified", "src": "10.0.10.17", "user": "user35"}
+{"ts": 1779080953.8, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_390.docx.locked"}
+{"ts": 1779080953.92, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_391.docx.locked"}
+{"ts": 1779080954.04, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_392.docx.locked"}
+{"ts": 1779080954.0494108, "type": "auth", "result": "failure", "user": "user15", "src": "10.0.10.11", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080954.16, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_393.docx.locked"}
+{"ts": 1779080954.2560375, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_244.xlsx", "action": "modified", "src": "10.0.10.27", "user": "user19"}
+{"ts": 1779080954.28, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_394.docx.locked"}
+{"ts": 1779080954.4, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_395.docx.locked"}
+{"ts": 1779080954.52, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\buyruq_396.docx.locked"}
+{"ts": 1779080954.64, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\hisobot_397.docx.locked"}
+{"ts": 1779080954.649617, "type": "auth", "result": "success", "user": "user36", "src": "10.0.10.47", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080954.649617, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_295.xlsx", "action": "modified", "src": "10.0.10.47", "user": "user29"}
+{"ts": 1779080954.76, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_398.docx.locked"}
+{"ts": 1779080954.88, "type": "fim", "host": "10.0.1.20", "action": "modified", "src": "10.0.10.41", "user": "user30", "path": "\\\\fs-01\\docs\\shartnoma_399.docx.locked"}
+{"ts": 1779080955.4356437, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_64.xlsx", "action": "modified", "src": "10.0.10.56", "user": "user08"}
+{"ts": 1779080959.082688, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_166.xlsx", "action": "modified", "src": "10.0.10.58", "user": "user10"}
+{"ts": 1779080960.5200408, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_131.xlsx", "action": "modified", "src": "10.0.10.11", "user": "user13"}
+{"ts": 1779080962.7669382, "type": "auth", "result": "failure", "user": "user24", "src": "10.0.10.47", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080963.2496836, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_222.xlsx", "action": "modified", "src": "10.0.10.15", "user": "user04"}
+{"ts": 1779080963.347051, "type": "auth", "result": "success", "user": "user39", "src": "10.0.10.50", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080970.16321, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_299.xlsx", "action": "modified", "src": "10.0.10.32", "user": "user15"}
+{"ts": 1779080972.2381291, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_19.xlsx", "action": "modified", "src": "10.0.10.46", "user": "user32"}
+{"ts": 1779080973.8912838, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_9.xlsx", "action": "modified", "src": "10.0.10.23", "user": "user21"}
+{"ts": 1779080977.2827861, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_130.xlsx", "action": "modified", "src": "10.0.10.49", "user": "user49"}
+{"ts": 1779080977.3118804, "type": "auth", "result": "failure", "user": "user07", "src": "10.0.10.57", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080977.8737106, "type": "auth", "result": "success", "user": "user26", "src": "10.0.10.37", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080978.253351, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_165.xlsx", "action": "modified", "src": "10.0.10.44", "user": "user40"}
+{"ts": 1779080978.5980203, "type": "auth", "result": "failure", "user": "user10", "src": "10.0.10.43", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080980.159663, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_27.xlsx", "action": "modified", "src": "10.0.10.50", "user": "user40"}
+{"ts": 1779080981.5065517, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_277.xlsx", "action": "modified", "src": "10.0.10.59", "user": "user09"}
+{"ts": 1779080981.9256003, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_19.xlsx", "action": "modified", "src": "10.0.10.58", "user": "user40"}
+{"ts": 1779080986.031346, "type": "auth", "result": "failure", "user": "user36", "src": "10.0.10.33", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080987.6058018, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_61.xlsx", "action": "modified", "src": "10.0.10.53", "user": "user22"}
+{"ts": 1779080990.3600452, "type": "fim", "host": "10.0.1.20", "path": "\\\\fs-01\\docs\\hisobot_149.xlsx", "action": "modified", "src": "10.0.10.19", "user": "user18"}
+{"ts": 1779080991.2432783, "type": "auth", "result": "success", "user": "user49", "src": "10.0.10.60", "host": "10.0.1.30", "proto": "kerberos"}
+{"ts": 1779080996.4976017, "type": "auth", "result": "failure", "user": "user04", "src": "10.0.10.59", "host": "10.0.1.30", "proto": "kerberos"}

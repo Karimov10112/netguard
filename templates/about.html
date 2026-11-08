@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Tizim haqida{% endblock %}
+{% block content %}
+<div class="page-head"><div><h1>Tizim haqida</h1><p>NetGuard — «Korxona tarmog‘ida kiberhujumlarni aniqlash va oldini olish tizimini ishlab chiqish» diplom loyihasining dasturiy qismi.</p></div></div>
+<div class="card">
+  <h2>To‘rt qatlamli gibrid arxitektura (3.1-band)</h2>
+  <div class="layers">
+    <div class="layer"><h3><span class="n">1</span>Ma’lumot yig‘ish</h3><ul><li>SPAN/TAP → Zeek conn.log, dns.log</li><li>Suricata EVE (alert, flow, dns)</li><li>Wazuh: autentifikatsiya, FIM</li><li>Simulyator (10 stsenariy)</li></ul></div>
+    <div class="layer"><h3><span class="n">2</span>Aniqlash</h3><ul><li>Signatura: C-ilova qoidalari + IoC</li><li>XGBoost — P_XGB, hujum turi</li><li>Isolation Forest — S_IF (normal profil)</li><li>NSL-KDD xususiyatlari (D-ilova)</li></ul></div>
+    <div class="layer"><h3><span class="n">3</span>Korrelyatsiya</h3><ul><li>Gibrid qoida (3.1)</li><li>Risk balli (3.2), S_aktiv</li><li>SIEM qoidalari R1–R8, MITRE ATT&CK</li><li>Insident (hodisa kartasi)</li></ul></div>
+    <div class="layer"><h3><span class="n">4</span>Javob</h3><ul><li>≥ 0,8: bloklash 24 soat / karantin</li><li>0,5–0,8: SOC tahlilchisi</li><li>&lt; 0,5: jurnal</li><li>Oq ro‘yxat, IDS rejimi, bekor qilish</li></ul></div>
+  </div>
+</div>
+<div class="grid grid-2 mt">
+  <div class="card">
+    <h2>Formulalar</h2>
+    <div class="formula">Ogohlantirish = Sig ∨ [P_XGB ≥ 0,5] ∨ [IF anomaliya] &nbsp;(3.1)</div>
+    <div class="formula mt">Risk = 0,4·S_sig + 0,3·P_XGB + 0,2·S_IF + 0,1·S_aktiv &nbsp;(3.2)</div>
+    <table class="mt"><thead><tr><th>Risk</th><th>Daraja</th><th>Chora</th></tr></thead><tbody>
+      <tr><td class="num">≥ 0,8</td><td><span class="pill high">Yuqori</span></td><td class="small">{{ LEVEL_ACTION_UZ.high }}</td></tr>
+      <tr><td class="num">0,5–0,8</td><td><span class="pill medium">O‘rta</span></td><td class="small">{{ LEVEL_ACTION_UZ.medium }}</td></tr>
+      <tr><td class="num">&lt; 0,5</td><td><span class="pill low">Past</span></td><td class="small">{{ LEVEL_ACTION_UZ.low }}</td></tr></tbody></table>
+    <p class="small muted">Suricata jiddiylik darajasi: 1 → 1,0; 2 → 0,6; 3 → 0,3 (B-ilova). Subyektning riski uning barcha ogohlantirishlaridagi eng yuqori komponentlardan hisoblanadi; korrelyatsiya qoidasi ishlasa, risk qoida darajasidan past bo‘lmaydi.</p>
+  </div>
+  <div class="card">
+    <h2>SIEM korrelyatsiya qoidalari (3.9-jadval)</h2>
+    <table><thead><tr><th></th><th>Qoida</th><th>ATT&CK</th><th>Javob</th></tr></thead><tbody>
+      {% for k, r in RULES.items() %}<tr><td><b>{{ k }}</b></td><td class="small"><b>{{ r[0] }}</b><br><span class="muted">{{ r[1] }}</span></td><td>{% for t in r[2] %}<span class="mitre">{{ t }}</span>{% endfor %}</td><td class="small">{{ r[3] }}</td></tr>{% endfor %}
+    </tbody></table>
+    <p class="small muted">R1–R6 — diplomdagi qoidalar; R7 (DNS tunnel) va R8 (takroriy anomal aloqa) 3.10-jadvaldagi 6- va 7-stsenariylarning kutilgan javobini ta’minlash uchun qo‘shilgan.</p>
+  </div>
+</div>
+<div class="grid grid-2 mt">
+  <div class="card">
+    <h2>Signatura qoidalari (C-ilova)</h2>
+    <table><tbody>
+      <tr><td><code>1000010</code></td><td>Port skanerlash — 30 s da ≥ 50 urinish</td><td><span class="mitre">T1046</span></td></tr>
+      <tr><td><code>1000011/14</code></td><td>RDP/SSH brute force — 60 s da ≥ 15 ulanish</td><td><span class="mitre">T1110</span></td></tr>
+      <tr><td><code>1000012</code></td><td>Stansiyalararo SMB ($USER_NET → $USER_NET:445)</td><td><span class="mitre">T1021.002</span></td></tr>
+      <tr><td><code>1000013</code></td><td>Uzun DNS so‘rovi (^[a-z0-9]{50,}\.)</td><td><span class="mitre">T1071.004</span></td></tr>
+      <tr><td><code>1000015</code></td><td>SYN flood — 2 s da ≥ 100 yarim ochiq ulanish</td><td><span class="mitre">T1499.001</span></td></tr>
+      <tr><td><code>1000020</code></td><td>IoC mosligi (IP / domen)</td><td><span class="mitre">T1071</span></td></tr>
+    </tbody></table>
+  </div>
+  <div class="card">
+    <h2>Texnologiyalar va cheklovlar</h2>
+    <p class="small">Python 3.10+, Flask, scikit-learn, XGBoost, pandas, SQLite. Integratsiya: Zeek, Suricata, Wazuh, ipset/iptables.</p>
+    <ul class="small" style="padding-left:18px">
+      <li>ML modellari NSL-KDD da o‘qitilgan; korxonada Isolation Forest o‘z normal trafigida qayta o‘qitiladi (normal profil), XGBoost esa laboratoriya sinovlari yorliqlangan ma’lumotlari bilan yangilanishi tavsiya etiladi.</li>
+      <li>Zeek jurnallarida NSL-KDD ning 13 ta «mazmun» xususiyati yo‘q, shuning uchun real trafik modeli 26 xususiyatdan foydalanadi.</li>
+      <li>Simulyator laboratoriya sinovlarini (3.10-jadval) almashtirmaydi — u modullarni namoyish qilish va avtomatik testlar uchun.</li>
+      <li>Bloklash buyruqlari konsolda ko‘rsatiladi; tarmoqqa ularni <code>blocker_agent.py</code> (root huquqi bilan) qo‘llaydi.</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
